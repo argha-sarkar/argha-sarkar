@@ -17,7 +17,7 @@ feature engineering, data modelling.
 </a>
 
 <a href="https://medium.com/@arghasarkar5373/">
-  <img align="left" alt="Argha's Medium" width="22px" src="https://https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/Medium-logo-2020-640x480.png" />
+  <img align="left" alt="Argha's Medium" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/medium-logo-93CDCF6451-seeklogo.com.png" />
 </a>
 
 
