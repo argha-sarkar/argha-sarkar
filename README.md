@@ -1,28 +1,31 @@
 
-# Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px">
+# Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
 
 - 👋 Hi, I’m - [argha-sarkar](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - 👀 I’m interested in Data Science
 - 🌱 I’m currently learning Machine learning
-- 💞️ I’m looking to collaborate on 
-- 📫 How to reach me ...
-
+- 💞️ I’m looking to new opportunity
 ## 🚀 About Me
 Experienced IT professional working in the Information Technology 
 and Services industry. Also a Data Science enthusiast. 
 Who really self-motivated in data analysis, data visualization, 
 feature engineering, data modelling.
 
-  
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+  ## 🔗 Links
+<a href="https://www.linkedin.com/in/arghasarkar/">
+  <img align="left" alt="Argha's LinkedIN" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/a3bdee193bd7bfc401e6b86e0e414eac7a237165/ImageFolder/logo/linkedin.svg" />
+</a>
 
-  
+<a href="https://medium.com/@arghasarkar5373/">
+  <img align="left" alt="Argha's Medium" width="22px" src="https://https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/Medium-logo-2020-640x480.png" />
+</a>
+
+
+
 ## 🛠 Skills
-Javascript, HTML, CSS...
-[![](https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/python.png)](https://katherinempeterson.com/)
-[![](https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/mysql.png)](https://katherinempeterson.com/)
-
-  
+`Python`
+`Machine Learning` 
+`MySQL` 
+`IBM DB2` 
+`Microsoft Office` 
+`Photoshop`
