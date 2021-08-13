@@ -5,7 +5,7 @@
 - 👀 I’m interested in Data Science
 - 🌱 I’m currently learning Machine learning
 - 💞️ I’m looking to new opportunity
-- 💼 Do reach, (arghasarkar5373@gmail.com) :)
+- 💼 Do reach, [gmail](arghasarkar5373@gmail.com) :)
 - 💬 ask me about anything, i am happy to help;
 
 ## 🚀 About Me
