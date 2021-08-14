@@ -13,6 +13,7 @@ Experienced IT professional working in the Information Technology
 and Services industry. Also a Data Science enthusiast. 
 Who really self-motivated in data analysis, data visualization, 
 feature engineering, data modelling.
+<hr></hr>
 ### 🔗 Links
 <a href="https://www.linkedin.com/in/arghasarkar/">
   <img align="left" alt="Argha's LinkedIN" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/a3bdee193bd7bfc401e6b86e0e414eac7a237165/ImageFolder/logo/linkedin.svg" />
