@@ -1,6 +1,4 @@
-<!-- Header gif -->
 
-# <p align='center'>![Hey there, I'm Argha. I'm a Data Science Enthusiast. Check out my work](https://raw.githubusercontent.com/danBamikiya/danBamikiya/main/dan_bio1.gif "Dan Bamikiya")<p>
 
 
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
@@ -33,3 +31,4 @@ feature engineering, data modelling.
 `IBM DB2` 
 `Microsoft Office` 
 `Photoshop`
+![](https://img.shields.io/badge/Editor-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&labelColor=9c9c9c&color=cdd5e0)
