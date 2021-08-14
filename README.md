@@ -34,8 +34,8 @@ If you contact me please click on the link below
 
 ### 🛠 Skills
 ![](https://img.shields.io/badge/-Python-blue)
-![](https://img.shields.io/badge/-Machine%20Learning-red)
-![](https://img.shields.io/badge/-Deep%20Learning-yellow)
+![](https://img.shields.io/badge/Machine-Learning-yellowred)
+![](https://img.shields.io/badge/Deep-Learning-yelloworange)
 ![](https://img.shields.io/badge/-MySQL-blue)
 ![](https://img.shields.io/badge/Jupyter-Notebook-yellowgreen)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
