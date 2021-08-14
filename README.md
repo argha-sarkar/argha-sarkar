@@ -13,7 +13,7 @@ Experienced IT professional working in the Information Technology
 and Services industry. Also a Data Science enthusiast. 
 Who really self-motivated in data analysis, data visualization, 
 feature engineering, data modelling.
-<hr>
+
 
 ### 🔗 Links
 <a href="https://www.linkedin.com/in/arghasarkar/">
@@ -31,6 +31,8 @@ feature engineering, data modelling.
 `Machine Learning` 
 `MySQL` 
 `IBM DB2` 
+`Visual Studio Code`
 `Microsoft Office` 
 `Photoshop`
+
 
