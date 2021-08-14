@@ -34,5 +34,5 @@ feature engineering, data modelling.
 `Visual Studio Code`
 `Microsoft Office` 
 `Photoshop`
-
+![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 
