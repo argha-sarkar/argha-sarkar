@@ -41,8 +41,8 @@ If you contact me please click on the link below
 <!--START_SECTION:waka-->
 ```text
 Machine Learning          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
-Python         4 hrs 50 mins         ████████████░░░░░░░░░░░░░░░░   45.68 % 
-Deep Learning   10 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.23 % 
+Python          4 hrs 50 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
+Deep Learning          10 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.23 % 
 Photoshop          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
 ```
 <!--END_SECTION:waka-->
