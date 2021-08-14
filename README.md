@@ -3,7 +3,7 @@
 
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
 
-- 👋 Hi, I’m - [argha-sarkar](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- 👋 Hi, I’m - [argha-sarkar](https://github.com/argha-sarkar)
 - 👀 I’m interested in Data Science
 - 🌱 I’m currently learning Machine learning
 - 💞️ I’m looking to new opportunity
