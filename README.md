@@ -1,5 +1,5 @@
 
-(https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif)
+<img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" width="25px"> 
 
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
 
