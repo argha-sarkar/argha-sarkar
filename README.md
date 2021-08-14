@@ -1,6 +1,7 @@
-<center>
-<img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" height="400px" width="400px" class="center"> 
-</center>
+<!--
+<img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" height="400px" width="400px" class="center"> -->
+
+
 <img align="right" alt="GIF" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" width="500" height="320" />
 
 
