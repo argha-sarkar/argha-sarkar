@@ -10,7 +10,7 @@
 - 👋 Hi, I’m - [argha-sarkar](https://github.com/argha-sarkar)
 - 👀 I’m interested in Data Science
 - 🌱 I’m currently learning Machine learning
-- 💞️ I’m looking for a new opportunity
+- 💞️ I’m looking for a new Job
 
 ### 🚀 About Me
 Experienced IT professional working in the Information Technology 
