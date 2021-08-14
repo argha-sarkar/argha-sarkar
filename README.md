@@ -16,6 +16,8 @@ feature engineering, data modelling.
 
 
 ### 🔗 Links
+If you contact me please click on the link below
+
 <a href="https://www.linkedin.com/in/arghasarkar/">
   <img align="left" alt="Argha's LinkedIN" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/a3bdee193bd7bfc401e6b86e0e414eac7a237165/ImageFolder/logo/linkedin.svg" />
 </a>
