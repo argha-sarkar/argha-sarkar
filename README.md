@@ -1,5 +1,10 @@
 
 <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" height="400px" width="400px" class="center"> 
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 img {
   display: block;
@@ -7,6 +12,19 @@ img {
   margin-right: auto;
 }
 </style>
+</head>
+<body>
+
+<h2>Center an Image</h2>
+<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+<img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" height="400px" width="400px" class="center">
+
+</body>
+</html>
+
+
+
 
 
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
