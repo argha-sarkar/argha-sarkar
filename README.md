@@ -31,4 +31,4 @@ feature engineering, data modelling.
 `IBM DB2` 
 `Microsoft Office` 
 `Photoshop`
-![](https://img.shields.io/badge/Editor-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&labelColor=9c9c9c&color=cdd5e0)
+
