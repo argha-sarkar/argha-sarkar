@@ -27,13 +27,6 @@ feature engineering, data modelling.
 <br>
 
 ### 🛠 Skills
-`Python`
-`Machine Learning` 
-`MySQL` 
-`IBM DB2` 
-`Visual Studio Code`
-`Microsoft Office` 
-`Photoshop`
 ![](https://img.shields.io/badge/-Python-blue)
 ![](https://img.shields.io/badge/-Machine%20Learning-red)
 ![](https://img.shields.io/badge/-MySQL-blue)
