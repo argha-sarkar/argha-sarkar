@@ -35,11 +35,13 @@ If you contact me please click on the link below
 ### 🛠 Skills
 ![](https://img.shields.io/badge/-Python-blue)
 ![](https://img.shields.io/badge/-Machine%20Learning-red)
+![](https://img.shields.io/badge/-Deep%20Learning-yellow)
 ![](https://img.shields.io/badge/-MySQL-blue)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
 ![](https://img.shields.io/badge/-Photoshop-inactive)
+
 
 ### 📊 **This  Week My Working  time :**
 <!--START_SECTION:waka-->
