@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" height="400px" width="400px" class="center"> -->
 
 
-<img align="right" alt="coding" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" width="300" height="300" />
+<img align="right" alt="coding" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" width="400" height="320" />
 
 
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
