@@ -34,5 +34,11 @@ feature engineering, data modelling.
 `Visual Studio Code`
 `Microsoft Office` 
 `Photoshop`
+![](https://img.shields.io/badge/-Python-blue)
+![](https://img.shields.io/badge/-Machine%20Learning-red)
+![](https://img.shields.io/badge/-MySQL-blue)
+![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
+![](https://img.shields.io/badge/-Microsoft%20Office-green)
+![](https://img.shields.io/badge/-Photoshop-inactive)
 
