@@ -23,10 +23,14 @@ feature engineering, data modelling.
 If you contact me please click on the link below
 
 <a href="https://www.linkedin.com/in/arghasarkar/">
-  <img align="left" alt="Argha's LinkedIN" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/a3bdee193bd7bfc401e6b86e0e414eac7a237165/ImageFolder/logo/linkedin.svg" />
+  <img align="left" alt="Argha's LinkedIN" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/Twitter-Logo-PNG3.png" />
 </a>
 
 <a href="https://medium.com/@arghasarkar5373/">
+  <img align="left" alt="Argha's Medium" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/medium-logo-93CDCF6451-seeklogo.com.png" />
+</a>
+
+<a href="https://twitter.com/arghasa64623109">
   <img align="left" alt="Argha's Medium" width="22px" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/logo/medium-logo-93CDCF6451-seeklogo.com.png" />
 </a>
 
