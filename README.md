@@ -46,7 +46,7 @@ If you contact me please click on the link below
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
-![](https://img.shields.io/badge/-Photoshop-inactive)
+![](https://img.shields.io/badge/-Tableau-inactive)
 
 
 ### 📊 **This  Week My Working  time :**
