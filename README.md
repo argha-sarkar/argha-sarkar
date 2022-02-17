@@ -38,24 +38,25 @@ If you contact me please click on the link below
 <br>
 
 ### 🛠 Skills
+![](https://img.shields.io/badge/-Tableau-inactive)
 ![](https://img.shields.io/badge/-Python-blue)
 ![](https://img.shields.io/badge/Machine-Learning-yellowred)
 ![](https://img.shields.io/badge/Deep-Learning-yelloworange)
-![](https://img.shields.io/badge/-MySQL-blue)
+![](https://img.shields.io/badge/-PostgreSQL-blue)
 ![](https://img.shields.io/badge/Jupyter-Notebook-yellowgreen)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
-![](https://img.shields.io/badge/-Tableau-inactive)
+
 
 
 ### 📊 **This  Week My Working  time :**
 <!--START_SECTION:waka-->
 ```text
-Python          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
-Python Text Book          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
-Linux OS          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
-Photoshop          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
+Tableau          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
+Python / Machine Learning          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
+PostgreSQL          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
+Data Studio          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
 ```
 <!--END_SECTION:waka-->
 
