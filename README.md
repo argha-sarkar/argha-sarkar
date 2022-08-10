@@ -8,8 +8,8 @@
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
 
 - 👋 Hi, I’m - [argha-sarkar](https://github.com/argha-sarkar)
-- 👀 I’m interested in Data Science
-- 🌱 I’m currently learning Data Analyst
+- 👀 I’m interested in Testing Analyst
+- 🌱 I’m currently learning Automation Testing, manual Testing
 - 💞️ I’m looking for a new Job
 
 ### 🚀 About Me
@@ -41,9 +41,9 @@ If you contact me please click on the link below
 ![](https://img.shields.io/badge/-Tableau-inactive)
 ![](https://img.shields.io/badge/-Python-blue)
 ![](https://img.shields.io/badge/Software-Testing-yellowred)
-![](https://img.shields.io/badge/Deep-Learning-yelloworange)
+![](https://img.shields.io/badge/Automation-Testing-yelloworange)
 ![](https://img.shields.io/badge/-PostgreSQL-blue)
-![](https://img.shields.io/badge/Jupyter-Notebook-yellowgreen)
+![](https://img.shields.io/badge/Manual-Testing-yellowgreen)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
