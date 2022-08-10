@@ -44,6 +44,7 @@ If you contact me please click on the link below
 ![](https://img.shields.io/badge/Automation-Testing-yelloworange)
 ![](https://img.shields.io/badge/-PostgreSQL-blue)
 ![](https://img.shields.io/badge/Manual-Testing-yellowgreen)
+![](https://img.shields.io/badge/-Git-green)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
 ![](https://img.shields.io/badge/-Visual%20Studio%20Code-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
