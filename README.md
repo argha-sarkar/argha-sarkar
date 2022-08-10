@@ -40,7 +40,7 @@ If you contact me please click on the link below
 ### 🛠 Skills
 ![](https://img.shields.io/badge/-Tableau-inactive)
 ![](https://img.shields.io/badge/-Python-blue)
-![](https://img.shields.io/badge/Machine-Learning-yellowred)
+![](https://img.shields.io/badge/Software-Testing-yellowred)
 ![](https://img.shields.io/badge/Deep-Learning-yelloworange)
 ![](https://img.shields.io/badge/-PostgreSQL-blue)
 ![](https://img.shields.io/badge/Jupyter-Notebook-yellowgreen)
@@ -53,10 +53,10 @@ If you contact me please click on the link below
 ### 📊 **This  Week My Working  time :**
 <!--START_SECTION:waka-->
 ```text
-Tableau          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
-Python / Machine Learning          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
-PostgreSQL          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
-Data Studio          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
+Automation Testing          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
+Manual Testing          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
+Python Programming          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
+Jira          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
 ```
 <!--END_SECTION:waka-->
 
