@@ -8,16 +8,14 @@
 # Hello - <img src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/hand.gif" width="25px"> ![](https://visitor-badge.glitch.me/badge?page_id=argha-sarkar.argha-sarkar)
 
 - 👋 Hi, I’m - [argha-sarkar](https://github.com/argha-sarkar)
-- 👀 I’m interested in Testing Analyst
-- 🌱 I’m currently learning Automation Testing, manual Testing
+- 👀 I’m interested in Data Analyst
+- 🌱 I’m currently learning Powerbi
 - 💞️ I’m looking for a new Job
 
 ### 🚀 About Me
-Experienced IT professional working in the Information Technology 
-and Services industry. Also a Data Science enthusiast. 
-Who really self-motivated in data analysis, data visualization, 
-feature engineering, data modelling.
-
+Seeking a challenging transition from an IT Enabled Services role to a Data Analyst position, leveraging four years of experience in IT-enabled service operations. A highly skilled Project Assistant with expertise in data analysis, database administration, and generating
+reports. Proficient in SQL, Python, Power BI, and Excel for data analysis, visualization, and automation. Seeking to apply strong analytical
+skills and contribute to data-driven decision-making processes in a Data Analyst role.
 
 ### 🔗 Links
 If you contact me please click on the link below
@@ -51,11 +49,11 @@ If you contact me please click on the link below
 
 
 
-### 📊 **This  Week My Working  time :**
+### 📊 **This  Week My Working  time:**
 <!--START_SECTION:waka-->
 ```text
-Automation Testing          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
-Manual Testing          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
+Powerbi          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
+SQL          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
 Python Programming          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
 Jira          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
 ```
