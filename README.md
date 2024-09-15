@@ -21,6 +21,8 @@ I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal U
 `Finance`
 `Artificial Intelligence`
 `Advanced Digital Transformation`
+`Data Analyst`
+`Cloud Computing`
 
 ### 🔗 Links
 If you contact me please click on the link below
