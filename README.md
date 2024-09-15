@@ -61,13 +61,13 @@ If you contact me please click on the link below
 ```text
 |  Subjects                 |        Hours      | Percentage |
 --------------------------------------------------------------
-|Powerbi                    | 9 hrs 6 mins      |   93.42 %  |
+|Data Sciencce              | 9 hrs 6 mins      |   93.42 %  |
 
-|SQL                        | 4 hrs 30 mins     |   45.68 %  |
+|MBA                        | 4 hrs 30 mins     |   45.68 %  |
 
 |Python Programming         | 1 Hrs 20 mins     |   12.16 %  |
 
-|Jira                       | 10 mins           |   01.97 %  |
+|Leader Ship Management     | 3 Hrs             |   01.97 %  |
 --------------------------------------------------------------
 ```
 <!--END_SECTION:waka-->
