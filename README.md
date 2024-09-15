@@ -16,9 +16,15 @@
 I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal University Jaipur (expected 2026). I have previously completed my Bachelor's in Computer Science and Engineering at Narula Institute of Technology (2018). My passion for extracting insights from data fuels my drive to develop innovative solutions across diverse domains.
 
 ### 🚀 Specialization
-`Data Science`
-`Cyber Security`
-`Finance`
+```bash
+Data Science
+```
+```bash
+Cyber Security
+```
+```bash
+Finance
+```
 
 ### 🔗 Links
 If you contact me please click on the link below
