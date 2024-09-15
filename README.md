@@ -52,10 +52,24 @@ If you contact me please click on the link below
 ### 📊 **This  Week My Working  time:**
 <!--START_SECTION:waka-->
 ```text
-Powerbi          9 hrs 6 mins    ███████████████████████▒░   93.42 % 
-SQL          4 hrs 30 mins         ████████████░░░░░░░░░░░░░░░  45.68 % 
-Python Programming          1 Hrs 20 mins         ██████▓░░░░░░░░░░░░░░░░░░░░░   12.16 % 
-Jira          10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
+Powerbi                     9 hrs 6 mins       93.42 %
+
+SQL                         4 hrs 30 mins     45.68 %
+
+Python Programming          1 Hrs 20 mins      12.16 %
+
+Jira                        10 mins            01.97 %
+
+
+			
+			
+			
+			
+			
+			
+			
+![image](https://github.com/user-attachments/assets/c6d62029-c439-4fea-bd50-07c44ac47cdd)
+
 ```
 <!--END_SECTION:waka-->
 
