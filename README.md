@@ -9,8 +9,8 @@
 
 - 👋 Hi, I’m - [argha-sarkar](https://github.com/argha-sarkar)
 - 👀 I’m interested in Data Science, Data Analyst, Cyber Security, Finance, Artificial Intelligence, Advanced Digital Transformation
-- 🌱 I’m currently learning Powerbi
-- 💞️ I’m looking for a new Job
+- 🌱 I’m currently learning 'Who am I'
+- 💞️ I’m looking for a new...
 
 ### 🚀 About Me
 I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal University Jaipur (expected 2026). I have previously completed my Bachelor's in Computer Science and Engineering at Narula Institute of Technology (2018). My passion for extracting insights from data fuels my drive to develop innovative solutions across diverse domains.
