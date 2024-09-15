@@ -13,9 +13,12 @@
 - 💞️ I’m looking for a new Job
 
 ### 🚀 About Me
-Seeking a challenging transition from an IT Enabled Services role to a Data Analyst position, leveraging four years of experience in IT-enabled service operations. A highly skilled Project Assistant with expertise in data analysis, database administration, and generating
-reports. Proficient in SQL, Python, Power BI, and Excel for data analysis, visualization, and automation. Seeking to apply strong analytical
-skills and contribute to data-driven decision-making processes in a Data Analyst role.
+I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal University Jaipur (expected 2026). I have previously completed my Bachelor's in Computer Science and Engineering at Narula Institute of Technology (2018). My passion for extracting insights from data fuels my drive to develop innovative solutions across diverse domains.
+
+### 🚀 Specialization
+`Data Science`
+`Cyber Security`
+`Finance`
 
 ### 🔗 Links
 If you contact me please click on the link below
