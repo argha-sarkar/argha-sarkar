@@ -60,15 +60,11 @@ Python Programming          1 Hrs 20 mins      12.16 %
 
 Jira                        10 mins            01.97 %
 
-
-			
-			
-			
-			
-			
-			
-			
-![image](https://github.com/user-attachments/assets/c6d62029-c439-4fea-bd50-07c44ac47cdd)
+| Feature                 | Description                                 |
+|-------------------------|:--------------------------------------------:|
+| Language Support       | Supports Markdown, code blocks, and headings |
+| Alignment               | Left, center, or right alignment for columns  |
+| Optional Styling       | You can add basic styling with colons (:)     |
 
 ```
 <!--END_SECTION:waka-->
