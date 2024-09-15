@@ -52,20 +52,16 @@ If you contact me please click on the link below
 ### 📊 **This  Week My Working  time:**
 <!--START_SECTION:waka-->
 ```text
-Powerbi                     9 hrs 6 mins       93.42 %
+|  Subjects                 |        Hours      | Percentage |
+--------------------------------------------------------------
+|Powerbi                    | 9 hrs 6 mins      |   93.42 %  |
 
-SQL                         4 hrs 30 mins     45.68 %
+|SQL                        | 4 hrs 30 mins     |   45.68 %  |
 
-Python Programming          1 Hrs 20 mins      12.16 %
+|Python Programming         | 1 Hrs 20 mins     |   12.16 %  |
 
-Jira                        10 mins            01.97 %
-
-| Feature                 | Description                                 |
-|-------------------------|:--------------------------------------------:|
-| Language Support       | Supports Markdown, code blocks, and headings |
-| Alignment               | Left, center, or right alignment for columns  |
-| Optional Styling       | You can add basic styling with colons (:)     |
-
+|Jira                       | 10 mins           |   01.97 %  |
+--------------------------------------------------------------
 ```
 <!--END_SECTION:waka-->
 
