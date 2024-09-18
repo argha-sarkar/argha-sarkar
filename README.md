@@ -44,15 +44,15 @@ If you contact me please click on the link below
 <br>
 
 ### 🛠 Skills
-![](https://img.shields.io/badge/-Tableau-inactive)
+![](https://img.shields.io/badge/-PowerBI-inactive)
 ![](https://img.shields.io/badge/-Python-blue)
-![](https://img.shields.io/badge/Software-Testing-yellowred)
-![](https://img.shields.io/badge/Automation-Testing-yelloworange)
-![](https://img.shields.io/badge/-PostgreSQL-blue)
-![](https://img.shields.io/badge/Manual-Testing-yellowgreen)
+![](https://img.shields.io/badge/Machine-Learning-yellowred)
+![](https://img.shields.io/badge/Deep-Learning-yelloworange)
+![](https://img.shields.io/badge/-MySQL-blue)
+![](https://img.shields.io/badge/Data-Engineering-yellowgreen)
 ![](https://img.shields.io/badge/-Git-green)
 ![](https://img.shields.io/badge/-IBM%20DB2-lightgrey)
-![](https://img.shields.io/badge/-Pycharm-blue)
+![](https://img.shields.io/badge/-VSCode-blue)
 ![](https://img.shields.io/badge/-Microsoft%20Office-green)
 
 
