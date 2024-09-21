@@ -23,7 +23,7 @@ I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal U
 `Advanced Digital Transformation`
 `Data Analyst`
 `Cloud Computing`
-`Deekfake Detection`
+`Deekfake Detection Analysis`
 
 ### 🔗 Links
 If you contact me please click on the link below
