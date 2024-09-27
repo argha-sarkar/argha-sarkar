@@ -22,6 +22,9 @@ I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal U
 `Cloud Computing`
 `Deekfake Detection Analysis`
 
+* **[What is Data Science]** - [IBM] - [2024]
+    * [https://www.coursera.org/account/accomplishments/certificate/5LQSBEGRMTQI]
+
 ### 🔗 Links
 If you contact me please click on the link below
 
