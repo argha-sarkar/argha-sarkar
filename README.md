@@ -80,3 +80,5 @@ If you contact me please click on the link below
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=argha-sarkar&theme=dark)
 
+![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=argha-sarkar&theme=dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=argha-sarkar&theme=dark&utcOffset=8)
