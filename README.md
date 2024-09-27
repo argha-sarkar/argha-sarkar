@@ -26,6 +26,8 @@ I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal U
 **[What is Data Science]** - [IBM] - [2024]
     * [https://www.coursera.org/account/accomplishments/certificate/5LQSBEGRMTQI]
 
+[![8 Data Structures Every Programmer Should Know](https://ytcards.demolab.com/?id=gxdQiBkidWk&title=8+Data+Structures+Every+Programmer+Should+Know&lang=en&timestamp=1727193642&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5&duration=1029 "8 Data Structures Every Programmer Should Know")](https://www.youtube.com/watch?v=gxdQiBkidWk)
+
 ### 🔗 Links
 If you contact me please click on the link below
 
