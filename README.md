@@ -26,7 +26,7 @@ I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal U
 **[What is Data Science]** - [IBM] - [2024]
     * [https://www.coursera.org/account/accomplishments/certificate/5LQSBEGRMTQI]
 
-[![What is Data Science](https://www.coursera.org/account/accomplishments/certificate/5LQSBEGRMTQI)
+[![What is Data Science](https://coursera.org/share/1ad87b8fa5e65d9e6b700164f658a653)
 
 ### 🔗 Links
 If you contact me please click on the link below
