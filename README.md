@@ -1,4 +1,4 @@
-<img align="right" alt="coding" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/refs/heads/main/ImageFolder/6682ad9d0acd8a635c5cd52e-un_quantum_technology.jpg" />
+<img align="right" alt="coding" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/refs/heads/main/ImageFolder/6682ad9d0acd8a635c5cd52e-un_quantum_technology.jpg" height = '300' />
 
 
 <img align="right" alt="coding" src="https://raw.githubusercontent.com/argha-sarkar/argha-sarkar/main/ImageFolder/coding-freak.gif" width="400" height="320" />
