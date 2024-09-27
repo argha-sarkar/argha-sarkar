@@ -82,3 +82,5 @@ If you contact me please click on the link below
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=argha-sarkar&theme=dark)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=argha-sarkar&theme=dark&utcOffset=8)
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=argha-sarkar&theme=dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=argha-sarkar&theme=dark)
