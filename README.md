@@ -10,7 +10,7 @@
 - 💞️ I’m looking for a new...
 
 ### 🚀 About Me
-I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal University Jaipur (expected 2026). I have previously completed my Bachelor's in Computer Science and Engineering at Narula Institute of Technology (2018). My passion for extracting insights from data fuels my drive to develop innovative solutions across diverse domains.
+I'm Argha Sarkar, a highly motivated data scientist pursuing an MBA at Manipal University Jaipur (2026). I have previously completed my Bachelor's in Computer Science and Engineering at Narula Institute of Technology (2018). My passion for extracting insights from data fuels my drive to develop innovative solutions across diverse domains.
 
 ### 🚀 Specialization
 `Data Science`
