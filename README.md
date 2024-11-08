@@ -60,9 +60,9 @@ If you contact me please click on the link below
 ```text
 |  Subjects                 |        Hours      | Percentage |
 --------------------------------------------------------------
-|Data Sciencce              | 9 hrs 6 mins      |   93.42 %  |
+|Data Sciencce              | 16 hrs 30 mins    |   93.42 %  |
 
-|MBA                        | 4 hrs 30 mins     |   45.68 %  |
+|MBA Subjects               | 30 hrs 30 mins    |   45.68 %  |
 
 |Python Programming         | 1 Hrs 20 mins     |   12.16 %  |
 
