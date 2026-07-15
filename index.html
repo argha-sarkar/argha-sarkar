@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Argha Sarkar — AI Research Engineer & Deep Learning Architect</title>
-  <meta name="description" content="Portfolio of Argha Sarkar — AI Research Engineer specializing in Deep Learning, MLOps, Deepfake Detection, RAG Systems, and Edge AI. 5+ years of experience building production AI." />
+  <title id="site-title">Argha Sarkar — AI Research Engineer & Deep Learning Architect</title>
+  <meta id="site-desc" name="description" content="Portfolio of Argha Sarkar — AI Research Engineer specializing in Deep Learning, MLOps, Deepfake Detection, RAG Systems, and Edge AI. 5+ years of experience building production AI." />
   <meta name="keywords" content="Argha Sarkar, AI Research Engineer, Deep Learning, MLOps, PyTorch, Deepfake Detection, RAG, LangChain, Computer Vision" />
   <meta name="author" content="Argha Sarkar" />
 
@@ -79,14 +79,14 @@
   </div>
 
   <h1 class="hero-name">
-    Argha <span class="accent">Sarkar</span>
+    <span id="hero-name-first">Argha</span> <span class="accent" id="hero-name-last">Sarkar</span>
   </h1>
 
   <p class="hero-title">
     &gt;&nbsp;<span id="typed-text">AI Research Engineer</span><span class="typed-cursor"></span>
   </p>
 
-  <div class="hero-badges-row">
+  <div class="hero-badges-row" id="hero-pills-row">
     <span class="status-pill"><span class="dot"></span>5+ YRS IT EXPERIENCE</span>
     <span class="status-pill">🧠 DEEP LEARNING</span>
     <span class="status-pill">🎭 DEEPFAKE DETECTION</span>
@@ -322,7 +322,7 @@
   <h2 class="section-title reveal">Experience Timeline</h2>
   <p class="section-sub reveal">From IT infrastructure to architecting autonomous AI systems.</p>
 
-  <div class="timeline">
+  <div class="timeline" id="timeline-container">
     <div class="timeline-item reveal">
       <div class="timeline-period">JAN 2019 → AUG 2024</div>
       <div class="timeline-role">Project Assistant</div>
@@ -359,7 +359,7 @@
   <h2 class="section-title reveal">Projects</h2>
   <p class="section-sub reveal">Research prototypes engineered into production-grade AI systems.</p>
 
-  <div class="projects-grid">
+  <div class="projects-grid" id="projects-container">
 
     <div class="project-card reveal reveal-delay-1">
       <span class="project-icon">🤟</span>
@@ -452,7 +452,7 @@
             <th style="text-align:right">STATUS</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="certs-tbody">
           <tr>
             <td>[DeepLearning.AI]</td>
             <td>Probability &amp; Statistics for ML &amp; Data Science</td>
@@ -502,7 +502,7 @@
   <h2 class="section-title reveal">Achievements</h2>
   <p class="section-sub reveal">Quantified impact across research, engineering, and operations.</p>
 
-  <div class="metrics-grid">
+  <div class="metrics-grid" id="metrics-container">
     <div class="metric-card reveal reveal-delay-1">
       <div class="metric-value" data-count="5" data-suffix="+">0+</div>
       <div class="metric-label">Years of<br>IT Experience</div>
@@ -560,6 +560,7 @@
       <!-- Top Languages — CSS chart (no external API dependency) -->
       <div class="top-langs-card">
         <div class="top-langs-title">▶ TOP LANGUAGES</div>
+        <div id="langs-container">
         <div class="top-langs-bars">
           <div class="lang-row">
             <span class="lang-dot" style="background:#3572A5"></span>
@@ -622,6 +623,7 @@
       <!-- Weekly Log -->
       <div class="weekly-log">
         <div class="log-header">⚡ WEEKLY ACTIVITY LOG // LIVE FEED</div>
+        <div id="weekly-container">
 
         <div class="log-row">
           <span class="log-label">🧠 Deep Learning Research</span>
@@ -683,7 +685,7 @@
   <h2 class="section-title reveal">Research Domains</h2>
   <p class="section-sub reveal">Core areas of deep expertise and active investigation.</p>
 
-  <div class="research-grid">
+  <div class="research-grid" id="research-container">
     <div class="research-card reveal reveal-delay-1">
       <div class="research-title">🧠 Artificial Intelligence &amp; Deep Learning</div>
       <p class="research-desc">Designing neural network architectures from scratch — CNNs, RNNs, Transformers, and hybrid models. Experienced in transfer learning, fine-tuning large pre-trained models (BERT, LLaMA, Mistral), and publishing reproducible ML experiments.</p>
@@ -796,6 +798,7 @@
   onmouseout="this.style.transform='scale(1)'"
 >↑</button>
 
+<script src="data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

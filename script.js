@@ -250,8 +250,184 @@ function initBackToTop() {
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
+/* ═══════════════════════════════════════════════════
+   APPLY DATA FROM ADMIN PANEL (localStorage)
+   ═══════════════════════════════════════════════════ */
+function applyData() {
+  if (typeof getData !== 'function') return;
+  const d = getData();
+
+  // SEO
+  const titleEl = document.getElementById('site-title');
+  const descEl  = document.getElementById('site-desc');
+  if (titleEl) document.title = titleEl.textContent = d.seo.title;
+  if (descEl)  descEl.setAttribute('content', d.seo.description);
+
+  // Theme
+  if (d.settings && d.settings.defaultTheme) {
+    const saved = localStorage.getItem('argha-theme');
+    if (!saved) applyTheme(d.settings.defaultTheme);
+  }
+
+  // Accent color
+  if (d.settings && d.settings.accentColor) {
+    document.documentElement.style.setProperty('--accent', d.settings.accentColor);
+    document.documentElement.style.setProperty('--accent-dim', d.settings.accentColor + 'cc');
+    document.documentElement.style.setProperty('--accent-glow', d.settings.accentColor + '33');
+  }
+
+  // Hero
+  const heroFirst = document.getElementById('hero-name-first');
+  const heroLast  = document.getElementById('hero-name-last');
+  if (heroFirst) heroFirst.textContent = d.hero.firstName;
+  if (heroLast)  heroLast.textContent  = d.hero.lastName;
+
+  // Update typing phrases
+  if (window._typingPhrases !== undefined) window._typingPhrases = d.hero.typingPhrases;
+
+  // Status pills
+  const pillsRow = document.getElementById('hero-pills-row');
+  if (pillsRow && d.hero.pills) {
+    pillsRow.innerHTML = d.hero.pills.map(p =>
+      `<span class="status-pill">${p.startsWith('5+') ? '<span class="dot"></span>' : ''}${p}</span>`
+    ).join('');
+  }
+
+  // About — JSON body
+  const ab = d.about;
+  const setT = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+  setT('about-designation', ab.designation);
+  setT('about-location',    ab.location);
+  setT('about-experience',  ab.experience);
+  setT('about-phone',       ab.phone);
+  setT('about-email',       ab.email);
+  setT('about-postgrad',    ab.postgrad);
+  setT('about-undergrad',   ab.undergrad);
+  setT('about-workstyle',   ab.workStyle);
+
+  const passionEl = document.getElementById('about-passions');
+  if (passionEl && ab.passions) {
+    passionEl.innerHTML = ab.passions.map(p =>
+      `&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"${p}"</span><span class="code-punc">,</span><br>`
+    ).join('');
+  }
+
+  // Projects
+  const projContainer = document.getElementById('projects-container');
+  if (projContainer && d.projects) {
+    projContainer.innerHTML = d.projects.map((p, i) => `
+      <div class="project-card reveal reveal-delay-${(i%4)+1}">
+        <span class="project-icon">${p.icon}</span>
+        <div class="project-name">${p.name}</div>
+        <p class="project-desc">${p.desc}</p>
+        <div class="project-stack">${p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('')}</div>
+      </div>
+    `).join('');
+  }
+
+  // Experience
+  const expContainer = document.getElementById('timeline-container');
+  if (expContainer && d.experience) {
+    expContainer.innerHTML = d.experience.map((e, i) => `
+      <div class="timeline-item reveal${i > 0 ? ' reveal-delay-2' : ''}">
+        <div class="timeline-period">${e.period}</div>
+        <div class="timeline-role">${e.role}</div>
+        <div class="timeline-company">${e.company}</div>
+        <ul class="timeline-points">${e.points.map(p => `<li>${p}</li>`).join('')}</ul>
+      </div>
+    `).join('');
+  }
+
+  // Certifications
+  const certBody = document.getElementById('certs-tbody');
+  if (certBody && d.certs) {
+    certBody.innerHTML = d.certs.map(c => `
+      <tr>
+        <td>${c.issuer}</td>
+        <td>${c.name}</td>
+        <td><span class="cert-status-icon">✅</span> ${c.status}</td>
+      </tr>
+    `).join('');
+  }
+
+  // Metrics
+  const metricsContainer = document.getElementById('metrics-container');
+  if (metricsContainer && d.achievements && d.achievements.metrics) {
+    metricsContainer.innerHTML = d.achievements.metrics.map((m, i) => `
+      <div class="metric-card reveal reveal-delay-${(i%4)+1}">
+        <div class="metric-value" data-count="${m.value === '∞' ? '∞' : m.value}" data-suffix="${m.suffix || ''}">${m.value}${m.suffix || ''}</div>
+        <div class="metric-label">${m.label1}<br>${m.label2}</div>
+      </div>
+    `).join('');
+  }
+
+  // Languages chart
+  const langsContainer = document.getElementById('langs-container');
+  if (langsContainer && d.stats && d.stats.languages) {
+    const langs = d.stats.languages;
+    const barsHtml = langs.map(l => `
+      <div class="lang-row">
+        <span class="lang-dot" style="background:${l.color}"></span>
+        <span class="lang-name">${l.name}</span>
+        <div class="lang-bar-track"><div class="lang-bar-fill" data-w="${l.pct}%" style="background:${l.color}"></div></div>
+        <span class="lang-pct">${l.pct}%</span>
+      </div>
+    `).join('');
+    const stackHtml = langs.map((l, i) => `
+      <div style="width:${l.pct}%;background:${l.color};${i===0?'border-radius:4px 0 0 4px':i===langs.length-1?'border-radius:0 4px 4px 0':''}" title="${l.name} ${l.pct}%"></div>
+    `).join('');
+    langsContainer.innerHTML = `
+      <div class="top-langs-bars">${barsHtml}</div>
+      <div class="lang-stack-bar">${stackHtml}</div>
+    `;
+  }
+
+  // Weekly stats
+  const weeklyContainer = document.getElementById('weekly-container');
+  if (weeklyContainer && d.stats && d.stats.weekly) {
+    weeklyContainer.innerHTML = d.stats.weekly.map(w => `
+      <div class="log-row">
+        <span class="log-label">${w.label}</span>
+        <div class="log-bar-wrap">
+          <div class="log-bar"><div class="log-bar-inner" style="width:${w.pct}%"></div></div>
+          <span class="log-time">${w.time}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Research
+  const researchContainer = document.getElementById('research-container');
+  if (researchContainer && d.research) {
+    researchContainer.innerHTML = d.research.map((r, i) => `
+      <div class="research-card reveal reveal-delay-${(i%4)+1}">
+        <div class="research-title">${r.title}</div>
+        <p class="research-desc">${r.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  // Social Links
+  const linkMap = {
+    'link-linkedin': d.connect?.linkedin,
+    'link-email':    d.connect?.email ? `mailto:${d.connect.email}` : null,
+    'link-medium':   d.connect?.medium,
+    'link-twitter':  d.connect?.twitter,
+    'link-github':   d.connect?.github
+  };
+  Object.entries(linkMap).forEach(([id, href]) => {
+    const el = document.getElementById(id);
+    if (el && href) el.href = href;
+  });
+
+  // Footer year
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl && d.settings?.footerYear) yearEl.textContent = d.settings.footerYear;
+}
+
 /* ── Init All ── */
 document.addEventListener('DOMContentLoaded', () => {
+  applyData();       // ← Apply admin changes FIRST
   initTheme();
   initMatrix();
   initTyping();
@@ -267,3 +443,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle-btn');
   if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
 });
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — Argha Sarkar Portfolio</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<!-- ═══════════════════════════════════
+     LOGIN SCREEN
+═══════════════════════════════════ -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-icon">🔐</div>
+    <div class="login-title">ADMIN_ACCESS // RESTRICTED</div>
+    <div class="login-sub">argha-sarkar portfolio control panel</div>
+
+    <div class="login-field">
+      <span class="field-icon">🔑</span>
+      <input type="password" id="login-pw" placeholder="Enter admin password" autocomplete="current-password" />
+    </div>
+
+    <button class="login-btn" onclick="doLogin()">./authenticate.sh</button>
+    <div class="login-error" id="login-error"></div>
+    <p style="margin-top:1.4rem;font-size:0.68rem;color:#484f58;font-family:'JetBrains Mono',monospace">
+      Default password: <code style="color:#8b949e">admin123</code>
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     ADMIN APP
+═══════════════════════════════════ -->
+<div id="admin-app">
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-name">⚡ ADMIN PANEL</div>
+      <div class="sidebar-brand-sub">argha-sarkar.github.io</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group-label">OVERVIEW</div>
+      <div class="nav-item active" data-section="dashboard">
+        <span class="nav-icon">🏠</span> Dashboard
+      </div>
+
+      <div class="nav-group-label">CONTENT</div>
+      <div class="nav-item" data-section="hero">
+        <span class="nav-icon">🦸</span> Hero
+      </div>
+      <div class="nav-item" data-section="about">
+        <span class="nav-icon">👤</span> About
+      </div>
+      <div class="nav-item" data-section="arsenal">
+        <span class="nav-icon">⚡</span> Arsenal
+      </div>
+      <div class="nav-item" data-section="experience">
+        <span class="nav-icon">💼</span> Experience
+      </div>
+      <div class="nav-item" data-section="projects">
+        <span class="nav-icon">🔬</span> Projects
+      </div>
+      <div class="nav-item" data-section="certs">
+        <span class="nav-icon">📜</span> Certifications
+      </div>
+      <div class="nav-item" data-section="achievements">
+        <span class="nav-icon">🏆</span> Achievements
+      </div>
+      <div class="nav-item" data-section="stats">
+        <span class="nav-icon">📊</span> Stats
+      </div>
+      <div class="nav-item" data-section="research">
+        <span class="nav-icon">🔭</span> Research
+      </div>
+      <div class="nav-item" data-section="connect">
+        <span class="nav-icon">📡</span> Connect
+      </div>
+
+      <div class="nav-group-label">SYSTEM</div>
+      <div class="nav-item" data-section="settings">
+        <span class="nav-icon">⚙️</span> Settings
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="logout-btn" onclick="doLogout()">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="admin-main">
+
+    <!-- Top Bar -->
+    <div class="admin-topbar">
+      <div class="topbar-title">
+        <span id="current-section-label">DASHBOARD</span>
+        &nbsp;/&nbsp; Portfolio Control Panel
+      </div>
+      <div class="topbar-actions">
+        <button class="tb-btn tb-btn-export" id="topbar-export-btn">📤 Export</button>
+        <button class="tb-btn tb-btn-preview" id="preview-btn">👁 Preview</button>
+        <button class="tb-btn tb-btn-save" id="save-btn">💾 Save All</button>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="admin-content">
+
+      <!-- Dashboard -->
+      <div class="panel active" id="panel-dashboard"></div>
+
+      <!-- Hero -->
+      <div class="panel" id="panel-hero"></div>
+
+      <!-- About -->
+      <div class="panel" id="panel-about"></div>
+
+      <!-- Arsenal -->
+      <div class="panel" id="panel-arsenal"></div>
+
+      <!-- Experience -->
+      <div class="panel" id="panel-experience"></div>
+
+      <!-- Projects -->
+      <div class="panel" id="panel-projects"></div>
+
+      <!-- Certifications -->
+      <div class="panel" id="panel-certs"></div>
+
+      <!-- Achievements -->
+      <div class="panel" id="panel-achievements"></div>
+
+      <!-- Stats -->
+      <div class="panel" id="panel-stats"></div>
+
+      <!-- Research -->
+      <div class="panel" id="panel-research"></div>
+
+      <!-- Connect -->
+      <div class="panel" id="panel-connect"></div>
+
+      <!-- Settings -->
+      <div class="panel" id="panel-settings"></div>
+
+    </div><!-- /admin-content -->
+  </div><!-- /admin-main -->
+</div><!-- /admin-app -->
+
+<!-- Export Modal -->
+<div class="modal-overlay" id="export-modal">
+  <div class="modal-box">
+    <div class="modal-title">📤 EXPORT SITE DATA (JSON)</div>
+    <p style="font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem;font-family:'JetBrains Mono',monospace">
+      Copy this JSON and paste it into data.js as the DEFAULT_DATA value to make changes permanent for all visitors.
+    </p>
+    <textarea class="modal-textarea" id="export-textarea" readonly></textarea>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="document.getElementById('export-modal').classList.remove('open')">Close</button>
+      <button class="modal-btn primary" onclick="navigator.clipboard.writeText(document.getElementById('export-textarea').value).then(()=>toast('Copied to clipboard!'))">📋 Copy</button>
+    </div>
+  </div>
+</div>
+
+<!-- Import Modal -->
+<div class="modal-overlay" id="import-modal">
+  <div class="modal-box">
+    <div class="modal-title">📥 IMPORT SITE DATA (JSON)</div>
+    <p style="font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem;font-family:'JetBrains Mono',monospace">
+      Paste exported JSON below to restore a backup or transfer data.
+    </p>
+    <textarea class="modal-textarea" id="import-textarea" placeholder="Paste JSON here..."></textarea>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="document.getElementById('import-modal').classList.remove('open')">Cancel</button>
+      <button class="modal-btn primary" onclick="doImport()">Import & Apply</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
