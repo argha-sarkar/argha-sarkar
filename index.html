@@ -557,12 +557,57 @@
         loading="lazy"
       />
       <br/><br/>
-      <img
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-sarkar&layout=pie&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=6&hide=jupyter%20notebook"
-        alt="Top Languages"
-        style="width:100%;border-radius:12px;max-height:260px;object-fit:contain;"
-        loading="lazy"
-      />
+      <!-- Top Languages — CSS chart (no external API dependency) -->
+      <div class="top-langs-card">
+        <div class="top-langs-title">▶ TOP LANGUAGES</div>
+        <div class="top-langs-bars">
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#3572A5"></span>
+            <span class="lang-name">Python</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="72%" style="background:#3572A5"></div></div>
+            <span class="lang-pct">72%</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#f34b7d"></span>
+            <span class="lang-name">C++</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="10%" style="background:#f34b7d"></div></div>
+            <span class="lang-pct">10%</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#e34c26"></span>
+            <span class="lang-name">HTML</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="8%" style="background:#e34c26"></div></div>
+            <span class="lang-pct">8%</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#563d7c"></span>
+            <span class="lang-name">CSS</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="5%" style="background:#563d7c"></div></div>
+            <span class="lang-pct">5%</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#f1e05a"></span>
+            <span class="lang-name">JavaScript</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="3%" style="background:#f1e05a"></div></div>
+            <span class="lang-pct">3%</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-dot" style="background:#276DC3"></span>
+            <span class="lang-name">R</span>
+            <div class="lang-bar-track"><div class="lang-bar-fill" data-w="2%" style="background:#276DC3"></div></div>
+            <span class="lang-pct">2%</span>
+          </div>
+        </div>
+        <!-- Stacked colour bar -->
+        <div class="lang-stack-bar">
+          <div style="width:72%;background:#3572A5;border-radius:4px 0 0 4px;" title="Python 72%"></div>
+          <div style="width:10%;background:#f34b7d;" title="C++ 10%"></div>
+          <div style="width:8%;background:#e34c26;" title="HTML 8%"></div>
+          <div style="width:5%;background:#563d7c;" title="CSS 5%"></div>
+          <div style="width:3%;background:#f1e05a;" title="JavaScript 3%"></div>
+          <div style="width:2%;background:#276DC3;border-radius:0 4px 4px 0;" title="R 2%"></div>
+        </div>
+      </div>
     </div>
 
     <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:1.2rem;">

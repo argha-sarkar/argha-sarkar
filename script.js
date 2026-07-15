@@ -135,8 +135,9 @@ function initScrollReveal() {
   els.forEach(el => io.observe(el));
 }
 
-/* ── Proficiency Bars ── */
+/* ── Proficiency Bars + Lang Bars ── */
 function initProfBars() {
+  // Proficiency bars use data-width
   const bars = document.querySelectorAll('.prof-bar-fill');
   const io   = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -146,8 +147,19 @@ function initProfBars() {
       }
     });
   }, { threshold: 0.3 });
-
   bars.forEach(bar => io.observe(bar));
+
+  // Language bars use data-w
+  const langBars = document.querySelectorAll('.lang-bar-fill');
+  const io2 = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.w;
+        io2.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  langBars.forEach(bar => io2.observe(bar));
 }
 
 /* ── Navbar scroll effect ── */
