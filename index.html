@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argha Sarkar — AI Research Engineer & Deep Learning Architect</title>
+  <meta name="description" content="Portfolio of Argha Sarkar — AI Research Engineer specializing in Deep Learning, MLOps, Deepfake Detection, RAG Systems, and Edge AI. 5+ years of experience building production AI." />
+  <meta name="keywords" content="Argha Sarkar, AI Research Engineer, Deep Learning, MLOps, PyTorch, Deepfake Detection, RAG, LangChain, Computer Vision" />
+  <meta name="author" content="Argha Sarkar" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Argha Sarkar — AI Research Engineer" />
+  <meta property="og:description" content="Building systems that learn. Deep Learning, MLOps, and Production AI." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- Matrix Rain Background -->
+<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+<!-- ═══════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">argha<span>@ai-lab</span>&nbsp;<span style="color:var(--text-muted)">~</span></a>
+
+    <ul class="nav-links" aria-label="Navigation links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#arsenal">ARSENAL</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#certs">CERTS</a></li>
+      <li><a href="#stats">STATS</a></li>
+      <li><a href="#connect">CONNECT</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon">☀️</span>
+        <span class="theme-label">LIGHT</span>
+      </button>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav id="nav-mobile" class="nav-mobile" aria-label="Mobile navigation">
+  <a href="#about">ABOUT</a>
+  <a href="#arsenal">ARSENAL</a>
+  <a href="#experience">EXPERIENCE</a>
+  <a href="#projects">PROJECTS</a>
+  <a href="#certs">CERTS</a>
+  <a href="#stats">STATS</a>
+  <a href="#research">RESEARCH</a>
+  <a href="#connect">CONNECT</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════ -->
+<section id="hero" class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    STATUS&nbsp;·&nbsp;ONLINE&nbsp;·&nbsp;INDIA
+  </div>
+
+  <h1 class="hero-name">
+    Argha <span class="accent">Sarkar</span>
+  </h1>
+
+  <p class="hero-title">
+    &gt;&nbsp;<span id="typed-text">AI Research Engineer</span><span class="typed-cursor"></span>
+  </p>
+
+  <div class="hero-badges-row">
+    <span class="status-pill"><span class="dot"></span>5+ YRS IT EXPERIENCE</span>
+    <span class="status-pill">🧠 DEEP LEARNING</span>
+    <span class="status-pill">🎭 DEEPFAKE DETECTION</span>
+    <span class="status-pill">📡 RAG SYSTEMS</span>
+    <span class="status-pill">⚙️ MLOPS</span>
+    <span class="status-pill">🔐 CYBER SECURITY</span>
+  </div>
+
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-primary">./view_projects.sh</a>
+    <a href="#connect" class="btn btn-outline">./connect.sh</a>
+    <a href="mailto:arghasarkar5373@gmail.com" class="btn btn-outline">./email.sh</a>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 01 — ABOUT
+═══════════════════════════════════ -->
+<section id="about" class="section">
+  <p class="section-label reveal">SECTION_01 // IDENTITY_BLOCK</p>
+  <h2 class="section-title reveal">System User Info</h2>
+  <p class="section-sub reveal">Who's running the terminal on the other side.</p>
+
+  <div class="about-grid">
+    <!-- JSON Card -->
+    <div class="code-block reveal reveal-delay-1">
+      <div class="code-block-header">
+        <span class="code-dot red"></span>
+        <span class="code-dot yellow"></span>
+        <span class="code-dot green"></span>
+        <span class="code-block-title">system_user_info.json</span>
+      </div>
+      <div class="code-body">
+        <span class="code-punc">{</span><br>
+        &nbsp;&nbsp;<span class="code-key">"name"</span><span class="code-punc">: </span><span class="code-str">"Argha Sarkar"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"status"</span><span class="code-punc">: </span><span class="code-val">"ONLINE 🟢"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"designation"</span><span class="code-punc">: </span><span class="code-str">"AI Research Engineer"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"location"</span><span class="code-punc">: </span><span class="code-str">"India 🇮🇳"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"experience"</span><span class="code-punc">: </span><span class="code-str">"5+ Years (IT Ops → AI Engineering)"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"phone"</span><span class="code-punc">: </span><span class="code-str">"+91-7439018427"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"email"</span><span class="code-punc">: </span><span class="code-str">"arghasarkar5373@gmail.com"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"education"</span><span class="code-punc">: {</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"postgrad"</span><span class="code-punc">: </span><span class="code-str">"MBA Analytics &amp; DS, MUJ (2024–2026)"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"undergrad"</span><span class="code-punc">: </span><span class="code-str">"B.Tech CSE, Narula Institute (2014–2018)"</span><br>
+        &nbsp;&nbsp;<span class="code-punc">},</span><br>
+        &nbsp;&nbsp;<span class="code-key">"passion"</span><span class="code-punc">: [</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Building systems that LEARN"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Breaking AI until it's stronger"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Shipping ML to production at scale"</span><br>
+        &nbsp;&nbsp;<span class="code-punc">]</span><br>
+        <span class="code-punc">}</span>
+      </div>
+    </div>
+
+    <!-- Navigation tree + Directives -->
+    <div style="display:flex;flex-direction:column;gap:1.2rem;">
+      <div class="nav-tree reveal reveal-delay-2">
+        <div style="color:var(--accent);margin-bottom:0.5rem;">🧭 NAVIGATION [QUICK_LINKS]</div>
+        <div>┌──[<span class="prompt">argha@ai-lab</span>]─[~]</div>
+        <div>│</div>
+        <div>├── 📂 <a href="#about">About</a>&emsp;&emsp;&emsp;&emsp;&nbsp;→ Section 01</div>
+        <div>├── ⚡ <a href="#arsenal">Tech Arsenal</a>&emsp;&nbsp;→ Section 02</div>
+        <div>├── 💼 <a href="#experience">Experience</a>&emsp;&emsp;&nbsp;→ Section 03</div>
+        <div>├── 🔬 <a href="#projects">Projects</a>&emsp;&emsp;&emsp;→ Section 04</div>
+        <div>├── 📜 <a href="#certs">Certs</a>&emsp;&emsp;&emsp;&emsp;&nbsp;→ Section 05</div>
+        <div>├── 🏆 <a href="#achievements">Achievements</a>&emsp;→ Section 06</div>
+        <div>├── 📊 <a href="#stats">GitHub Stats</a>&emsp;→ Section 07</div>
+        <div>└── 📡 <a href="#connect">Connect</a>&emsp;&emsp;&emsp;→ Section 08</div>
+        <div>│</div>
+        <div>└──╼ <span class="prompt">$</span> ./goto.sh --section &lt;name&gt;</div>
+      </div>
+
+      <div class="nav-tree reveal reveal-delay-3">
+        <div style="color:var(--accent);margin-bottom:0.5rem;">🎯 CURRENT_DIRECTIVES</div>
+        <div><span class="prompt">$</span> cat active_missions.log</div>
+        <div>[1] Deepfake Detection via CNN/GAN analysis</div>
+        <div>[2] RAG-powered multi-agent LLM workflows</div>
+        <div>[3] Low-latency CV inference on edge devices</div>
+        <div>[4] MLOps pipelines: Docker → FastAPI → CI/CD</div>
+        <div style="margin-top:0.5rem;"><span class="prompt">$</span> echo $WORK_STYLE</div>
+        <div style="color:var(--text-primary);">&gt; <em>"Break it in research, harden it in prod."</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 02 — TECH ARSENAL
+═══════════════════════════════════ -->
+<section id="arsenal" class="section">
+  <p class="section-label reveal">SECTION_02 // NEURAL_ARSENAL</p>
+  <h2 class="section-title reveal">Tech Arsenal</h2>
+  <p class="section-sub reveal">A complete map of technologies I command in research and production.</p>
+
+  <div class="tech-grid">
+    <!-- Deep Learning -->
+    <div class="tech-card reveal reveal-delay-1">
+      <div class="tech-card-header">
+        <span class="tech-card-icon">🧠</span>
+        <span class="tech-card-title">Deep Learning &amp; AI</span>
+      </div>
+      <div class="badge-grid">
+        <span class="tech-badge">PyTorch</span>
+        <span class="tech-badge">TensorFlow</span>
+        <span class="tech-badge">Keras</span>
+        <span class="tech-badge">HuggingFace</span>
+        <span class="tech-badge">LangChain</span>
+        <span class="tech-badge">OpenCV</span>
+        <span class="tech-badge">YOLOv8</span>
+        <span class="tech-badge">Ollama</span>
+      </div>
+    </div>
+
+    <!-- MLOps -->
+    <div class="tech-card reveal reveal-delay-2">
+      <div class="tech-card-header">
+        <span class="tech-card-icon">⚙️</span>
+        <span class="tech-card-title">MLOps &amp; Infrastructure</span>
+      </div>
+      <div class="badge-grid">
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">Kubernetes</span>
+        <span class="tech-badge">MLflow</span>
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">GitHub Actions</span>
+        <span class="tech-badge">W&amp;B</span>
+        <span class="tech-badge">ChromaDB</span>
+        <span class="tech-badge">FAISS</span>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="tech-card reveal reveal-delay-3">
+      <div class="tech-card-header">
+        <span class="tech-card-icon">🐍</span>
+        <span class="tech-card-title">Languages &amp; Data</span>
+      </div>
+      <div class="badge-grid">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">R</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Bash</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">NumPy</span>
+        <span class="tech-badge">Scikit-Learn</span>
+        <span class="tech-badge">Power BI</span>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="tech-card reveal reveal-delay-4">
+      <div class="tech-card-header">
+        <span class="tech-card-icon">🛡️</span>
+        <span class="tech-card-title">Security &amp; Systems</span>
+      </div>
+      <div class="badge-grid">
+        <span class="tech-badge">Linux</span>
+        <span class="tech-badge">Kali Linux</span>
+        <span class="tech-badge">Wireshark</span>
+        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">MongoDB</span>
+        <span class="tech-badge">IBM DB2</span>
+        <span class="tech-badge">Git</span>
+        <span class="tech-badge">VS Code</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Proficiency Matrix -->
+  <div class="proficiency-table reveal" style="margin-top:3rem;">
+    <div class="prof-header">
+      &gt; PROFICIENCY_MATRIX // skill_assessment.log
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Python &amp; Data Engineering</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="100%"></div></div>
+      <span class="prof-level">Expert</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Deep Learning (PyTorch/TF)</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="100%"></div></div>
+      <span class="prof-level">Expert</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Computer Vision</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="85%"></div></div>
+      <span class="prof-level">Advanced</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Natural Language Processing</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="85%"></div></div>
+      <span class="prof-level">Advanced</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">MLOps &amp; Production AI</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="80%"></div></div>
+      <span class="prof-level">Advanced</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">LLMs &amp; RAG Systems</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="75%"></div></div>
+      <span class="prof-level">Proficient</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Cyber Security &amp; OSINT</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="70%"></div></div>
+      <span class="prof-level">Proficient</span>
+    </div>
+    <div class="prof-row">
+      <span class="prof-label">Quantitative Finance</span>
+      <div class="prof-bar-track"><div class="prof-bar-fill" data-width="60%"></div></div>
+      <span class="prof-level">Intermediate</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 03 — EXPERIENCE
+═══════════════════════════════════ -->
+<section id="experience" class="section">
+  <p class="section-label reveal">SECTION_03 // WORK_HISTORY</p>
+  <h2 class="section-title reveal">Experience Timeline</h2>
+  <p class="section-sub reveal">From IT infrastructure to architecting autonomous AI systems.</p>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-period">JAN 2019 → AUG 2024</div>
+      <div class="timeline-role">Project Assistant</div>
+      <div class="timeline-company">🏢 NEVAEH TECHNOLOGY PVT. LTD.</div>
+      <ul class="timeline-points">
+        <li>Directed full project lifecycles for IT-driven business initiatives</li>
+        <li>Spearheaded cross-functional infrastructure engineering rollouts</li>
+        <li>Ensured system stability, minimized downtime across production environments</li>
+        <li>Led client-facing technical integrations &amp; managed project deliveries</li>
+        <li>Transitioned team workflows toward data-driven decision frameworks</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item reveal reveal-delay-2">
+      <div class="timeline-period">2024 → 2026 (ONGOING)</div>
+      <div class="timeline-role">MBA: Analytics &amp; Data Science</div>
+      <div class="timeline-company">📚 MANIPAL UNIVERSITY JAIPUR</div>
+      <ul class="timeline-points">
+        <li>Specialization: Business Analytics, Predictive Modeling, AI Strategy</li>
+        <li>Focus: Bridging MBA leadership with production AI engineering</li>
+        <li>Research Track: Deepfake Detection &amp; Media Integrity Systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 04 — PROJECTS
+═══════════════════════════════════ -->
+<section id="projects" class="section">
+  <p class="section-label reveal">SECTION_04 // MISSION_ARCHIVES</p>
+  <h2 class="section-title reveal">Projects</h2>
+  <p class="section-sub reveal">Research prototypes engineered into production-grade AI systems.</p>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-icon">🤟</span>
+      <div class="project-name">ASL Vision System</div>
+      <p class="project-desc">Real-time American Sign Language to text pipeline. Features model quantization, frame-rate optimization, and hardware-accelerated inference for edge device deployment. Production-grade CV pipeline with &lt;50ms latency.</p>
+      <div class="project-stack">
+        <span class="stack-tag">PyTorch</span>
+        <span class="stack-tag">OpenCV</span>
+        <span class="stack-tag">YOLO</span>
+        <span class="stack-tag">MLOps</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-icon">🤖</span>
+      <div class="project-name">AI Agentic Study Coach</div>
+      <p class="project-desc">Multi-agent architecture with Planner, Teacher, and Evaluator autonomous loops. Integrated ChromaDB vector memory for RAG. Generates personalized learning paths, adaptive quizzes, and progress tracking.</p>
+      <div class="project-stack">
+        <span class="stack-tag">LangChain</span>
+        <span class="stack-tag">LLMs</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">ChromaDB</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-3">
+      <span class="project-icon">🏠</span>
+      <div class="project-name">House Prices MLOps Pipeline</div>
+      <p class="project-desc">End-to-end MLOps system evolved from experimental Jupyter notebooks to a scalable, Dockerized microservice. Includes automated feature engineering, CI/CD, unit testing, and a FastAPI inference endpoint.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Scikit-learn</span>
+        <span class="stack-tag">Docker</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">GitHub Actions</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-icon">🎭</span>
+      <div class="project-name">Deepfake Detection System</div>
+      <p class="project-desc">CNN/GAN-based forensic classifier for detecting synthetic media. Trained on real vs. AI-generated media datasets with focus on temporal inconsistency and artifact analysis in compressed video streams.</p>
+      <div class="project-stack">
+        <span class="stack-tag">PyTorch</span>
+        <span class="stack-tag">ResNet</span>
+        <span class="stack-tag">EfficientNet</span>
+        <span class="stack-tag">CV</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-icon">📈</span>
+      <div class="project-name">Financial Market Analyzer</div>
+      <p class="project-desc">Time-series forecasting engine for equity markets using LSTM and Prophet models. Built quantitative signal detection for algorithmic trading strategy backtesting and risk analysis.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">LSTM</span>
+        <span class="stack-tag">Prophet</span>
+        <span class="stack-tag">Pandas</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 05 — CERTIFICATIONS
+═══════════════════════════════════ -->
+<section id="certs" class="section">
+  <p class="section-label reveal">SECTION_05 // CERT_VAULT</p>
+  <h2 class="section-title reveal">Certifications</h2>
+  <p class="section-sub reveal">Verified credentials and active knowledge licenses.</p>
+
+  <div class="terminal-window reveal">
+    <div class="terminal-header">
+      <span class="code-dot red"></span>
+      <span class="code-dot yellow"></span>
+      <span class="code-dot green"></span>
+      <span class="terminal-title">argha@ai-lab:~/certs</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="terminal-cmd">$</span> ls -lah --sort=date</div>
+      <br>
+      <table class="cert-table">
+        <thead>
+          <tr>
+            <th>ISSUER</th>
+            <th>CERTIFICATION</th>
+            <th style="text-align:right">STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[DeepLearning.AI]</td>
+            <td>Probability &amp; Statistics for ML &amp; Data Science</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+          <tr>
+            <td>[IBM]</td>
+            <td>Introduction to Machine Learning Specialization</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+          <tr>
+            <td>[IBM]</td>
+            <td>Generative AI for Digital Marketing</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+          <tr>
+            <td>[UC Davis]</td>
+            <td>Market Research Specialization</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+          <tr>
+            <td>[Coursera]</td>
+            <td>Data Science Professional Certificate</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+          <tr>
+            <td>[Google]</td>
+            <td>Data Analytics Certificate</td>
+            <td><span class="cert-status-icon">✅</span> ACTIVE</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div><span class="terminal-cmd">$</span> echo "Total credentials loaded: 6"</div>
+      <div><span style="color:var(--text-primary)">&gt;</span> <span class="terminal-cmd">"Continuous learning protocol: ENABLED ∞"</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 06 — ACHIEVEMENTS
+═══════════════════════════════════ -->
+<section id="achievements" class="section">
+  <p class="section-label reveal">SECTION_06 // SYSTEM_METRICS</p>
+  <h2 class="section-title reveal">Achievements</h2>
+  <p class="section-sub reveal">Quantified impact across research, engineering, and operations.</p>
+
+  <div class="metrics-grid">
+    <div class="metric-card reveal reveal-delay-1">
+      <div class="metric-value" data-count="5" data-suffix="+">0+</div>
+      <div class="metric-label">Years of<br>IT Experience</div>
+    </div>
+    <div class="metric-card reveal reveal-delay-2">
+      <div class="metric-value" data-count="5" data-suffix="+">0+</div>
+      <div class="metric-label">Production AI<br>Projects Shipped</div>
+    </div>
+    <div class="metric-card reveal reveal-delay-3">
+      <div class="metric-value" data-count="6">0</div>
+      <div class="metric-label">Professional<br>Certifications</div>
+    </div>
+    <div class="metric-card reveal reveal-delay-4">
+      <div class="metric-value" data-count="2">0</div>
+      <div class="metric-label">Advanced<br>Degrees</div>
+    </div>
+    <div class="metric-card reveal reveal-delay-1">
+      <div class="metric-value" data-count="∞">∞</div>
+      <div class="metric-label">Models Trained<br>&amp; Broken</div>
+    </div>
+  </div>
+
+  <!-- Daily Rhythm -->
+  <div class="rhythm-block reveal">
+    <div class="rhythm-comment"># What drives me every single day:</div>
+    life_loop = {<br>
+    &nbsp;&nbsp;<span class="rhythm-key">"morning"</span>  : <span class="rhythm-val">"☕ Read a paper, run an experiment"</span>,<br>
+    &nbsp;&nbsp;<span class="rhythm-key">"afternoon"</span>: <span class="rhythm-val">"🧠 Train models, tune hyperparams"</span>,<br>
+    &nbsp;&nbsp;<span class="rhythm-key">"evening"</span>  : <span class="rhythm-val">"🔐 Analyze threat vectors, write code"</span>,<br>
+    &nbsp;&nbsp;<span class="rhythm-key">"midnight"</span> : <span class="rhythm-val">"🌙 Push commits, break prod, fix prod"</span>,<br>
+    &nbsp;&nbsp;<span class="rhythm-key">"philosophy"</span>: <span class="rhythm-accent">"while alive: learn(). build(). repeat()"</span><br>
+    }
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 07 — GITHUB STATS
+═══════════════════════════════════ -->
+<section id="stats" class="section">
+  <p class="section-label reveal">SECTION_07 // NEURAL_ACTIVITY_MONITOR</p>
+  <h2 class="section-title reveal">GitHub Stats</h2>
+  <p class="section-sub reveal">Live telemetry from the commit feed — all systems pushing to main.</p>
+
+  <div class="stats-grid">
+    <div class="stats-embed reveal reveal-delay-1">
+      <img
+        src="https://streak-stats.demolab.com/?user=argha-sarkar&theme=dark&hide_border=true&background=0d1117&stroke=00ff41&ring=00ff41&fire=ff4500&currStreakLabel=00ff41&sideLabels=00ff41&currStreakNum=00ff41&sideNums=c9d1d9&dates=666666"
+        alt="GitHub Streak Stats"
+        style="width:100%;border-radius:12px;"
+        loading="lazy"
+      />
+      <br/><br/>
+      <img
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-sarkar&layout=pie&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=6&hide=jupyter%20notebook"
+        alt="Top Languages"
+        style="width:100%;border-radius:12px;max-height:260px;object-fit:contain;"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:1.2rem;">
+      <!-- Quick stats badges -->
+      <div class="glass-card" style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;">
+        <img src="https://img.shields.io/github/followers/argha-sarkar?label=FOLLOWERS&style=for-the-badge&color=00ff41&labelColor=0d1117&logo=github" alt="Followers" loading="lazy" />
+        <img src="https://img.shields.io/github/stars/argha-sarkar?label=TOTAL+STARS&style=for-the-badge&color=00ff41&labelColor=0d1117&logo=github&affiliations=OWNER%2CCOLLABORATOR" alt="Stars" loading="lazy" />
+        <img src="https://img.shields.io/badge/COMMITS-540%2B-00ff41?style=for-the-badge&labelColor=0d1117&logo=git" alt="Commits" loading="lazy" />
+        <img src="https://img.shields.io/badge/EXPERIENCE-5%2B_YEARS-00ff41?style=for-the-badge&labelColor=0d1117&logo=todoist" alt="Experience" loading="lazy" />
+      </div>
+
+      <!-- Weekly Log -->
+      <div class="weekly-log">
+        <div class="log-header">⚡ WEEKLY ACTIVITY LOG // LIVE FEED</div>
+
+        <div class="log-row">
+          <span class="log-label">🧠 Deep Learning Research</span>
+          <div class="log-bar-wrap">
+            <div class="log-bar"><div class="log-bar-inner" style="width:85%"></div></div>
+            <span class="log-time">26h 30m</span>
+          </div>
+        </div>
+        <div class="log-row">
+          <span class="log-label">📚 MBA Coursework</span>
+          <div class="log-bar-wrap">
+            <div class="log-bar"><div class="log-bar-inner" style="width:63%"></div></div>
+            <span class="log-time">15h 30m</span>
+          </div>
+        </div>
+        <div class="log-row">
+          <span class="log-label">🐍 Python Engineering</span>
+          <div class="log-bar-wrap">
+            <div class="log-bar"><div class="log-bar-inner" style="width:20%"></div></div>
+            <span class="log-time">01h 20m</span>
+          </div>
+        </div>
+        <div class="log-row">
+          <span class="log-label">👔 Leadership &amp; Strategy</span>
+          <div class="log-bar-wrap">
+            <div class="log-bar"><div class="log-bar-inner" style="width:30%"></div></div>
+            <span class="log-time">03h 00m</span>
+          </div>
+        </div>
+        <div class="log-row">
+          <span class="log-label">🔐 Security Research</span>
+          <div class="log-bar-wrap">
+            <div class="log-bar"><div class="log-bar-inner" style="width:12%"></div></div>
+            <span class="log-time">00h 45m</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contribution Graph -->
+      <div class="stats-embed">
+        <img
+          src="https://github-readme-activity-graph.vercel.app/graph?username=argha-sarkar&bg_color=0d1117&color=00ff41&line=00ff41&point=ffffff&area=true&area_color=00ff41&hide_border=true&custom_title=ARGHA%27S+COMMIT+HEATMAP"
+          alt="Contribution Heatmap"
+          style="width:100%;border-radius:12px;"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 08 — RESEARCH DOMAINS
+═══════════════════════════════════ -->
+<section id="research" class="section">
+  <p class="section-label reveal">SECTION_08 // RESEARCH_DOMAINS</p>
+  <h2 class="section-title reveal">Research Domains</h2>
+  <p class="section-sub reveal">Core areas of deep expertise and active investigation.</p>
+
+  <div class="research-grid">
+    <div class="research-card reveal reveal-delay-1">
+      <div class="research-title">🧠 Artificial Intelligence &amp; Deep Learning</div>
+      <p class="research-desc">Designing neural network architectures from scratch — CNNs, RNNs, Transformers, and hybrid models. Experienced in transfer learning, fine-tuning large pre-trained models (BERT, LLaMA, Mistral), and publishing reproducible ML experiments.</p>
+    </div>
+
+    <div class="research-card reveal reveal-delay-2">
+      <div class="research-title">🎭 Deepfake &amp; Synthetic Media Detection</div>
+      <p class="research-desc">Building robust forensic classifiers to identify GAN-generated and diffusion-model-generated synthetic media. Research focus: temporal artifact analysis, frequency domain anomalies, and adversarial robustness.</p>
+    </div>
+
+    <div class="research-card reveal reveal-delay-3">
+      <div class="research-title">📡 Retrieval-Augmented Generation (RAG)</div>
+      <p class="research-desc">End-to-end RAG system design using vector databases (ChromaDB, FAISS), embedding models, and LLM orchestration via LangChain. Building knowledge-grounded agentic workflows.</p>
+    </div>
+
+    <div class="research-card reveal reveal-delay-4">
+      <div class="research-title">⚙️ MLOps &amp; AI Engineering</div>
+      <p class="research-desc">From notebook to production: containerization (Docker/K8s), model versioning (MLflow), monitoring (W&amp;B), REST APIs (FastAPI), CI/CD automation. Bridging the gap between research and real-world deployment.</p>
+    </div>
+
+    <div class="research-card reveal reveal-delay-1">
+      <div class="research-title">🔐 Cyber Security &amp; OSINT</div>
+      <p class="research-desc">Threat analysis, network forensics, vulnerability assessment, and open-source intelligence gathering. Applying AI-driven anomaly detection to cybersecurity frameworks.</p>
+    </div>
+
+    <div class="research-card reveal reveal-delay-2">
+      <div class="research-title">📈 Quantitative Finance &amp; AI</div>
+      <p class="research-desc">Applying LSTM networks, Prophet, and statistical methods to financial time series. Developing signal detection algorithms for algorithmic trading strategy backtesting and risk analysis.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 09 — CONNECT
+═══════════════════════════════════ -->
+<footer id="connect" class="connect-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="section-label" style="text-align:center;">SECTION_09 // ESTABLISH_CONNECTION</p>
+    <h2 class="section-title" style="text-align:center;">Let's Connect</h2>
+    <p class="section-sub" style="text-align:center;">Open for research collaborations, AI engineering roles, and consulting.</p>
+
+    <div class="social-links">
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/arghasarkar" target="_blank" rel="noopener" class="social-btn" id="link-linkedin">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <!-- Gmail -->
+      <a href="mailto:arghasarkar5373@gmail.com" class="social-btn" id="link-email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        Gmail
+      </a>
+      <!-- Medium -->
+      <a href="https://medium.com/@arghasarkar5373/" target="_blank" rel="noopener" class="social-btn" id="link-medium">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+        Medium
+      </a>
+      <!-- Twitter/X -->
+      <a href="https://twitter.com/arghasa64623109" target="_blank" rel="noopener" class="social-btn" id="link-twitter">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Twitter / X
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/argha-sarkar" target="_blank" rel="noopener" class="social-btn" id="link-github">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+    </div>
+
+    <!-- Terminal Footer Block -->
+    <div class="footer-terminal">
+      <div><span style="color:var(--text-muted)">#</span> Terminal transmission complete.</div>
+      <div>print(<span style="color:var(--accent)">"─" * 60</span>)</div>
+      <div style="color:var(--text-primary)">&gt; AI systems built. Models deployed. Neurons firing.</div>
+      <div style="color:var(--text-primary)">&gt; Initiating next training epoch...</div>
+      <div style="color:var(--text-secondary)">&gt; <a href="mailto:arghasarkar5373@gmail.com" style="color:var(--accent);text-decoration:none;">arghasarkar5373@gmail.com</a> | +91-7439018427</div>
+      <div>print(<span style="color:var(--accent)">"─" * 60</span>)</div>
+    </div>
+
+    <!-- Footer Bar -->
+    <div class="footer-bar">
+      <span class="status-badge"><span class="dot-green"></span>SYSTEM_STATUS: ONLINE</span>
+      <span class="status-badge">LAST_UPDATED: JULY 2026</span>
+      <span class="status-badge">© 2026 ARGHA SARKAR</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- Back to Top -->
+<button
+  id="back-to-top"
+  aria-label="Back to top"
+  style="
+    position:fixed;bottom:2rem;right:2rem;
+    width:44px;height:44px;
+    background:var(--accent);color:#0d1117;
+    border:none;border-radius:50%;
+    font-size:1.2rem;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 16px var(--accent-glow);
+    opacity:0;pointer-events:none;
+    transition:opacity 0.3s,transform 0.3s;
+    z-index:999;
+  "
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'"
+>↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

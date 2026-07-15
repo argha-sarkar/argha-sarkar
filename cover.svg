@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="1000" height="350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap');
+
+      /* Scan line animation */
+      @keyframes scan {
+        0%   { transform: translateY(-100%); }
+        100% { transform: translateY(400px); }
+      }
+      /* Pulse ring */
+      @keyframes pulse {
+        0%,100% { opacity: 1; r: 4; }
+        50%      { opacity: 0.3; r: 7; }
+      }
+      /* Blink */
+      @keyframes blink {
+        0%,100% { opacity: 1; }
+        50%      { opacity: 0; }
+      }
+      /* Glow text pulse */
+      @keyframes glow {
+        0%,100% { filter: drop-shadow(0 0 6px #00ff41) drop-shadow(0 0 12px #00ff41); }
+        50%      { filter: drop-shadow(0 0 18px #00ff41) drop-shadow(0 0 35px #00ff41) drop-shadow(0 0 60px #00ff41); }
+      }
+      /* Flicker */
+      @keyframes flicker {
+        0%,19%,21%,23%,25%,54%,56%,100% { opacity: 1; }
+        20%,24%,55% { opacity: 0.4; }
+      }
+      /* Circuit pulse */
+      @keyframes circuit-flow {
+        0%   { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      /* Matrix rain drop */
+      @keyframes rain1 { from { transform: translateY(-30px); opacity:0 } 30% { opacity:0.5 } to { transform: translateY(380px); opacity:0 } }
+      @keyframes rain2 { from { transform: translateY(-60px); opacity:0 } 30% { opacity:0.4 } to { transform: translateY(380px); opacity:0 } }
+      @keyframes rain3 { from { transform: translateY(-10px); opacity:0 } 30% { opacity:0.6 } to { transform: translateY(380px); opacity:0 } }
+
+      .bg       { fill: #030a04; }
+      .name     { font-family: 'Orbitron', 'Share Tech Mono', monospace; font-size: 58px; font-weight: 700;
+                  fill: #00ff41; letter-spacing: 4px; animation: glow 2.5s ease-in-out infinite; }
+      .subtitle { font-family: 'Share Tech Mono', monospace; font-size: 19px; fill: #8fe89a; letter-spacing: 3px; animation: flicker 5s infinite; }
+      .role2    { font-family: 'Share Tech Mono', monospace; font-size: 14px; fill: #4db86a; letter-spacing: 2px; }
+      .contact  { font-family: 'Share Tech Mono', monospace; font-size: 15px; fill: #00ff41; }
+      .label    { font-family: 'Share Tech Mono', monospace; font-size: 11px; fill: #00ff41; opacity:0.7; }
+      .glow-rect { fill: none; stroke: #00ff41; stroke-width: 1.5; filter: drop-shadow(0 0 4px #00ff41); opacity:0.8; }
+      .circuit  { stroke: #00ff41; stroke-width: 1.2; fill: none; opacity: 0.5;
+                  stroke-dasharray: 200; animation: circuit-flow 3s linear infinite; }
+      .node     { fill: #00ff41; animation: pulse 2s ease-in-out infinite; }
+      .cursor   { fill: #00ff41; animation: blink 1s step-end infinite; }
+      .scanline { fill: url(#scanGrad); opacity: 0.06; animation: scan 4s linear infinite; }
+      .rain     { font-family: 'Share Tech Mono', monospace; font-size: 13px; fill: #00ff41; }
+      .rain-c1  { animation: rain1 3.2s linear infinite; }
+      .rain-c2  { animation: rain2 4.1s linear 0.6s infinite; }
+      .rain-c3  { animation: rain3 2.8s linear 1.2s infinite; }
+      .rain-c4  { animation: rain1 3.8s linear 1.8s infinite; }
+      .rain-c5  { animation: rain2 3.0s linear 0.3s infinite; }
+      .bracket  { stroke: #00ff41; stroke-width: 2.5; fill: none; opacity: 0.6; }
+    </style>
+
+    <!-- Scan gradient -->
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#00ff41" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#00ff41" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Horizontal line glow gradient -->
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00ff41" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#00ff41" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1000" height="350" class="bg"/>
+
+  <!-- Scanline overlay -->
+  <rect class="scanline" x="0" y="-30" width="1000" height="40"/>
+
+  <!-- Matrix rain columns -->
+  <g class="rain rain-c1"><text x="30"  y="0">0</text><text x="30"  y="20">1</text><text x="30"  y="40">A</text><text x="30"  y="60">I</text><text x="30"  y="80">0</text><text x="30" y="100">1</text></g>
+  <g class="rain rain-c2"><text x="75"  y="0">N</text><text x="75"  y="20">E</text><text x="75"  y="40">U</text><text x="75"  y="60">R</text><text x="75"  y="80">A</text><text x="75" y="100">L</text></g>
+  <g class="rain rain-c3"><text x="120" y="0">1</text><text x="120" y="20">0</text><text x="120" y="40">1</text><text x="120" y="60">0</text><text x="120" y="80">1</text><text x="120" y="100">1</text></g>
+  <g class="rain rain-c4"><text x="875" y="0">G</text><text x="875" y="20">A</text><text x="875" y="40">N</text><text x="875" y="60">0</text><text x="875" y="80">1</text><text x="875" y="100">X</text></g>
+  <g class="rain rain-c5"><text x="940" y="0">M</text><text x="940" y="20">L</text><text x="940" y="40">0</text><text x="940" y="60">1</text><text x="940" y="80">P</text><text x="940" y="100">Y</text></g>
+
+  <!-- Left circuit lines -->
+  <path class="circuit" d="M 0 140 L 60 140 L 90 110 L 175 110"/>
+  <circle class="node" cx="175" cy="110" r="4"/>
+  <path class="circuit" d="M 0 180 L 70 180 L 110 220 L 185 220"/>
+  <circle class="node" cx="185" cy="220" r="4"/>
+  <path class="circuit" d="M 0 240 L 40 240 L 60 260 L 140 260"/>
+  <circle class="node" cx="140" cy="260" r="3"/>
+
+  <!-- Right circuit lines -->
+  <path class="circuit" d="M 1000 140 L 940 140 L 910 110 L 825 110"/>
+  <circle class="node" cx="825" cy="110" r="4"/>
+  <path class="circuit" d="M 1000 180 L 930 180 L 890 220 L 815 220"/>
+  <circle class="node" cx="815" cy="220" r="4"/>
+  <path class="circuit" d="M 1000 240 L 960 240 L 940 260 L 860 260"/>
+  <circle class="node" cx="860" cy="260" r="3"/>
+
+  <!-- Corner Brackets -->
+  <path class="bracket" d="M 18 55 L 18 20 L 55 20"/>
+  <path class="bracket" d="M 982 55 L 982 20 L 945 20"/>
+  <path class="bracket" d="M 18 295 L 18 330 L 55 330"/>
+  <path class="bracket" d="M 982 295 L 982 330 L 945 330"/>
+
+  <!-- Separator lines (glowing) -->
+  <rect x="0" y="125" width="1000" height="1" fill="url(#lineGrad)" opacity="0.4"/>
+  <rect x="0" y="290" width="1000" height="1" fill="url(#lineGrad)" opacity="0.4"/>
+
+  <!-- Top label -->
+  <text x="500" y="40" text-anchor="middle" class="label">[ SYSTEM USER // AUTHENTICATED SESSION ]</text>
+
+  <!-- Main name -->
+  <text x="500" y="107" text-anchor="middle" class="name">ARGHA SARKAR</text>
+
+  <!-- Subtitle -->
+  <text x="500" y="148" text-anchor="middle" class="subtitle">&lt; AI RESEARCH ENGINEER & DATA SCIENTIST /&gt;</text>
+
+  <!-- Roles row -->
+  <text x="500" y="178" text-anchor="middle" class="role2">DEEP LEARNING  ·  MLOps  ·  COMPUTER VISION  ·  CYBER SECURITY  ·  NLP</text>
+
+  <!-- Divider dots -->
+  <circle cx="390" cy="200" r="2" fill="#00ff41" opacity="0.5"/>
+  <circle cx="430" cy="200" r="2" fill="#00ff41" opacity="0.5"/>
+  <circle cx="500" cy="200" r="2" fill="#00ff41" opacity="0.8"/>
+  <circle cx="570" cy="200" r="2" fill="#00ff41" opacity="0.5"/>
+  <circle cx="610" cy="200" r="2" fill="#00ff41" opacity="0.5"/>
+
+  <!-- Contact box -->
+  <rect x="185" y="218" width="630" height="44" rx="3" class="glow-rect"/>
+  <text x="500" y="237" text-anchor="middle" class="label">CONTACT</text>
+  <text x="500" y="255" text-anchor="middle" class="contact">arghasarkar5373@gmail.com  ·  +91-7439018427  ·  India</text>
+
+  <!-- Blinking cursor -->
+  <rect class="cursor" x="683" y="242" width="8" height="14"/>
+
+  <!-- Bottom status row -->
+  <text x="500" y="315" text-anchor="middle" class="label">STATUS: ONLINE  ◈  MBA @ MANIPAL UNIVERSITY  ◈  B.TECH CSE @ NARULA INSTITUTE</text>
+  <text x="500" y="338" text-anchor="middle" class="label">[ EPOCH 2026 // SYSTEMS OPERATIONAL // NEURAL NETWORKS LOADING... ]</text>
+</svg>
