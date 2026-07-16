@@ -75,7 +75,7 @@
 <section id="hero" class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
-    STATUS&nbsp;·&nbsp;ONLINE&nbsp;·&nbsp;INDIA
+    <span id="hero-status-text">STATUS&nbsp;·&nbsp;ONLINE&nbsp;·&nbsp;INDIA</span>
   </div>
 
   <h1 class="hero-name">
@@ -130,19 +130,21 @@
         <span class="code-punc">{</span><br>
         &nbsp;&nbsp;<span class="code-key">"name"</span><span class="code-punc">: </span><span class="code-str">"Argha Sarkar"</span><span class="code-punc">,</span><br>
         &nbsp;&nbsp;<span class="code-key">"status"</span><span class="code-punc">: </span><span class="code-val">"ONLINE 🟢"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;<span class="code-key">"designation"</span><span class="code-punc">: </span><span class="code-str">"AI Research Engineer"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;<span class="code-key">"location"</span><span class="code-punc">: </span><span class="code-str">"India 🇮🇳"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;<span class="code-key">"experience"</span><span class="code-punc">: </span><span class="code-str">"5+ Years (IT Ops → AI Engineering)"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;<span class="code-key">"phone"</span><span class="code-punc">: </span><span class="code-str">"+91-7439018427"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;<span class="code-key">"email"</span><span class="code-punc">: </span><span class="code-str">"arghasarkar5373@gmail.com"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"designation"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-designation">AI Research Engineer</span>"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"location"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-location">India 🇮🇳</span>"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"experience"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-experience">5+ Years (IT Ops → AI Engineering)</span>"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"phone"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-phone">+91-7439018427</span>"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;<span class="code-key">"email"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-email">arghasarkar5373@gmail.com</span>"</span><span class="code-punc">,</span><br>
         &nbsp;&nbsp;<span class="code-key">"education"</span><span class="code-punc">: {</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"postgrad"</span><span class="code-punc">: </span><span class="code-str">"MBA Analytics &amp; DS, MUJ (2024–2026)"</span><span class="code-punc">,</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"undergrad"</span><span class="code-punc">: </span><span class="code-str">"B.Tech CSE, Narula Institute (2014–2018)"</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"postgrad"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-postgrad">MBA Analytics &amp; DS, MUJ (2024–2026)</span>"</span><span class="code-punc">,</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">"undergrad"</span><span class="code-punc">: </span><span class="code-str">"<span id="about-undergrad">B.Tech CSE, Narula Institute (2014–2018)</span>"</span><br>
         &nbsp;&nbsp;<span class="code-punc">},</span><br>
         &nbsp;&nbsp;<span class="code-key">"passion"</span><span class="code-punc">: [</span><br>
+        <span id="about-passions">
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Building systems that LEARN"</span><span class="code-punc">,</span><br>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Breaking AI until it's stronger"</span><span class="code-punc">,</span><br>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Shipping ML to production at scale"</span><br>
+        </span>
         &nbsp;&nbsp;<span class="code-punc">]</span><br>
         <span class="code-punc">}</span>
       </div>
@@ -169,12 +171,14 @@
       <div class="nav-tree reveal reveal-delay-3">
         <div style="color:var(--accent);margin-bottom:0.5rem;">🎯 CURRENT_DIRECTIVES</div>
         <div><span class="prompt">$</span> cat active_missions.log</div>
+        <div id="about-directives">
         <div>[1] Deepfake Detection via CNN/GAN analysis</div>
         <div>[2] RAG-powered multi-agent LLM workflows</div>
         <div>[3] Low-latency CV inference on edge devices</div>
         <div>[4] MLOps pipelines: Docker → FastAPI → CI/CD</div>
+        </div>
         <div style="margin-top:0.5rem;"><span class="prompt">$</span> echo $WORK_STYLE</div>
-        <div style="color:var(--text-primary);">&gt; <em>"Break it in research, harden it in prod."</em></div>
+        <div style="color:var(--text-primary);">&gt; <em id="about-workstyle">"Break it in research, harden it in prod."</em></div>
       </div>
     </div>
   </div>
@@ -190,7 +194,7 @@
   <h2 class="section-title reveal">Tech Arsenal</h2>
   <p class="section-sub reveal">A complete map of technologies I command in research and production.</p>
 
-  <div class="tech-grid">
+  <div class="tech-grid" id="arsenal-categories">
     <!-- Deep Learning -->
     <div class="tech-card reveal reveal-delay-1">
       <div class="tech-card-header">
@@ -265,7 +269,7 @@
   </div>
 
   <!-- Proficiency Matrix -->
-  <div class="proficiency-table reveal" style="margin-top:3rem;">
+  <div class="proficiency-table reveal" id="arsenal-proficiency" style="margin-top:3rem;">
     <div class="prof-header">
       &gt; PROFICIENCY_MATRIX // skill_assessment.log
     </div>
@@ -533,7 +537,7 @@
   </div>
 
   <!-- Daily Rhythm -->
-  <div class="rhythm-block reveal">
+  <div class="rhythm-block reveal" id="rhythm-container">
     <div class="rhythm-comment"># What drives me every single day:</div>
     life_loop = {<br>
     &nbsp;&nbsp;<span class="rhythm-key">"morning"</span>  : <span class="rhythm-val">"☕ Read a paper, run an experiment"</span>,<br>

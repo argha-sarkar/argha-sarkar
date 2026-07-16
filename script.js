@@ -77,7 +77,7 @@ function initTyping() {
   const el = document.getElementById('typed-text');
   if (!el) return;
 
-  const phrases = [
+  const phrases = window._typingPhrases || [
     'AI Research Engineer',
     'Deep Learning Architect',
     'MLOps Engineer',
@@ -279,8 +279,10 @@ function applyData() {
   // Hero
   const heroFirst = document.getElementById('hero-name-first');
   const heroLast  = document.getElementById('hero-name-last');
+  const heroStatus = document.getElementById('hero-status-text');
   if (heroFirst) heroFirst.textContent = d.hero.firstName;
   if (heroLast)  heroLast.textContent  = d.hero.lastName;
+  if (heroStatus && d.hero.statusText) heroStatus.textContent = d.hero.statusText;
 
   // Update typing phrases
   if (window._typingPhrases !== undefined) window._typingPhrases = d.hero.typingPhrases;
@@ -310,6 +312,44 @@ function applyData() {
     passionEl.innerHTML = ab.passions.map(p =>
       `&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"${p}"</span><span class="code-punc">,</span><br>`
     ).join('');
+  }
+
+  const directivesEl = document.getElementById('about-directives');
+  if (directivesEl && ab.directives) {
+    directivesEl.innerHTML = ab.directives.map((p, i) =>
+      `<div>[${i + 1}] ${p}</div>`
+    ).join('');
+  }
+
+  // Arsenal
+  const arsenalCat = document.getElementById('arsenal-categories');
+  if (arsenalCat && d.arsenal && d.arsenal.categories) {
+    arsenalCat.innerHTML = d.arsenal.categories.map((c, i) => `
+      <div class="tech-card reveal reveal-delay-${(i % 4) + 1}">
+        <div class="tech-card-header">
+          <span class="tech-card-icon">${c.icon}</span>
+          <span class="tech-card-title">${c.title}</span>
+        </div>
+        <div class="badge-grid">
+          ${c.badges.map(b => `<span class="tech-badge">${b}</span>`).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  const arsenalProf = document.getElementById('arsenal-proficiency');
+  if (arsenalProf && d.arsenal && d.arsenal.proficiency) {
+    arsenalProf.innerHTML = `
+      <div class="prof-header">
+        &gt; PROFICIENCY_MATRIX // skill_assessment.log
+      </div>
+    ` + d.arsenal.proficiency.map(p => `
+      <div class="prof-row">
+        <span class="prof-label">${p.label}</span>
+        <div class="prof-bar-track"><div class="prof-bar-fill" data-width="${p.width}"></div></div>
+        <span class="prof-level">${p.level}</span>
+      </div>
+    `).join('');
   }
 
   // Projects
@@ -386,6 +426,22 @@ function applyData() {
         <div class="metric-label">${m.label1}<br>${m.label2}</div>
       </div>
     `).join('');
+  }
+
+  // Rhythm
+  const rhythmEl = document.getElementById('rhythm-container');
+  if (rhythmEl && d.achievements && d.achievements.rhythm) {
+    const rh = d.achievements.rhythm;
+    rhythmEl.innerHTML = `
+      <div class="rhythm-comment"># What drives me every single day:</div>
+      life_loop = {<br>
+      &nbsp;&nbsp;<span class="rhythm-key">"morning"</span>  : <span class="rhythm-val">"${rh.morning}"</span>,<br>
+      &nbsp;&nbsp;<span class="rhythm-key">"afternoon"</span>: <span class="rhythm-val">"${rh.afternoon}"</span>,<br>
+      &nbsp;&nbsp;<span class="rhythm-key">"evening"</span>  : <span class="rhythm-val">"${rh.evening}"</span>,<br>
+      &nbsp;&nbsp;<span class="rhythm-key">"midnight"</span> : <span class="rhythm-val">"${rh.midnight}"</span>,<br>
+      &nbsp;&nbsp;<span class="rhythm-key">"philosophy"</span>: <span class="rhythm-accent">"${rh.philosophy}"</span><br>
+      }
+    `;
   }
 
   // Languages chart
