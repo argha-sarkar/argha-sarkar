@@ -320,7 +320,9 @@ function applyData() {
     let html = projectsToShow.map((p, i) => `
       <div class="project-card reveal reveal-delay-${(i%4)+1}">
         <span class="project-icon">${p.icon}</span>
-        <div class="project-name">${p.name}</div>
+        <div class="project-name">
+          ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${p.name} <svg style="width:14px;height:14px;vertical-align:middle;margin-left:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>` : p.name}
+        </div>
         <p class="project-desc">${p.desc}</p>
         <div class="project-stack">${p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('')}</div>
       </div>
@@ -358,14 +360,15 @@ function applyData() {
       <tr>
         <td>${c.issuer}</td>
         <td>${c.name}</td>
-        <td><span class="cert-status-icon">✅</span> ${c.status}</td>
+        <td>${c.link ? `<a href="${c.link}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;font-size:0.85rem">View</a>` : '-'}</td>
+        <td style="text-align:right"><span class="cert-status-icon">✅</span> ${c.status}</td>
       </tr>
     `).join('');
     
     if (!isAllCertsPage && d.certs.length > 6) {
       html += `
       <tr>
-        <td colspan="3" style="text-align:center;">
+        <td colspan="4" style="text-align:center;">
           <a href="certifications.html" class="btn btn-outline" style="margin-top:1rem;display:inline-block;">View All Certifications →</a>
         </td>
       </tr>

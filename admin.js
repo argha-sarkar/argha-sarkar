@@ -525,7 +525,7 @@ function renderProjectsPanel(d) {
   renderProjList(d);
   document.getElementById('add-proj-btn').onclick = () => {
     const cur = getData();
-    cur.projects.push({ icon: '🚀', name: 'New Project', desc: 'Project description', stack: ['Python'] });
+    cur.projects.push({ icon: '🚀', name: 'New Project', desc: 'Project description', link: '', stack: ['Python'] });
     saveData(cur);
     renderProjList(cur);
   };
@@ -563,6 +563,10 @@ function renderProjList(d) {
             <label class="form-label">DESCRIPTION</label>
             <textarea class="form-textarea proj-desc">${esc(proj.desc)}</textarea>
           </div>
+          <div class="form-group full">
+            <label class="form-label">PROJECT LINK</label>
+            <input class="form-input proj-link" placeholder="https://..." value="${esc(proj.link || '')}" />
+          </div>
         </div>
         <label class="form-label" style="margin-bottom:0.4rem;display:block">TECH STACK TAGS (press Enter)</label>
         <div class="tags-container proj-stack-tags"></div>
@@ -592,12 +596,13 @@ function renderProjList(d) {
       e.stopPropagation();
       const cur = getData(); cur.projects.splice(i, 1); saveData(cur); renderProjList(cur);
     };
-    ['icon','name','desc'].forEach(f => {
+    ['icon','name','desc','link'].forEach(f => {
       item.querySelector(`.proj-${f}`).addEventListener('change', () => {
         const cur = getData();
         cur.projects[i].icon = item.querySelector('.proj-icon').value;
         cur.projects[i].name = item.querySelector('.proj-name').value;
         cur.projects[i].desc = item.querySelector('.proj-desc').value;
+        cur.projects[i].link = item.querySelector('.proj-link').value;
         saveData(cur);
         item.querySelector('.card-item-icon').textContent = cur.projects[i].icon;
         item.querySelector('.card-item-title').textContent = cur.projects[i].name;
@@ -624,7 +629,7 @@ function renderCertsPanel(d) {
   renderCertList(d);
   document.getElementById('add-cert-btn').onclick = () => {
     const cur = getData();
-    cur.certs.push({ issuer: '[Issuer]', name: 'Certification Name', status: 'ACTIVE' });
+    cur.certs.push({ issuer: '[Issuer]', name: 'Certification Name', link: '', status: 'ACTIVE' });
     saveData(cur);
     renderCertList(cur);
   };
@@ -666,6 +671,10 @@ function renderCertList(d) {
             <label class="form-label">CERTIFICATION NAME</label>
             <input class="form-input cert-name" value="${esc(cert.name)}" />
           </div>
+          <div class="form-group full">
+            <label class="form-label">LINK</label>
+            <input class="form-input cert-link" placeholder="https://..." value="${esc(cert.link || '')}" />
+          </div>
         </div>
       </div>
     `;
@@ -692,12 +701,13 @@ function renderCertList(d) {
       e.stopPropagation();
       const cur = getData(); cur.certs.splice(i, 1); saveData(cur); renderCertList(cur);
     };
-    ['issuer','name','status'].forEach(f => {
+    ['issuer','name','status','link'].forEach(f => {
       item.querySelector(`.cert-${f}`).addEventListener('change', () => {
         const cur = getData();
         cur.certs[i].issuer = item.querySelector('.cert-issuer').value;
         cur.certs[i].name   = item.querySelector('.cert-name').value;
         cur.certs[i].status = item.querySelector('.cert-status').value;
+        cur.certs[i].link   = item.querySelector('.cert-link').value;
         saveData(cur);
       });
     });

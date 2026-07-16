@@ -119,37 +119,42 @@ const DEFAULT_DATA = {
   projects: [
     {
       icon: "🤟", name: "ASL Vision System",
+      link: "",
       desc: "Real-time American Sign Language to text pipeline. Features model quantization, frame-rate optimization, and hardware-accelerated inference for edge device deployment. Production-grade CV pipeline with <50ms latency.",
       stack: ["PyTorch","OpenCV","YOLO","MLOps"]
     },
     {
       icon: "🤖", name: "AI Agentic Study Coach",
+      link: "",
       desc: "Multi-agent architecture with Planner, Teacher, and Evaluator autonomous loops. Integrated ChromaDB vector memory for RAG. Generates personalized learning paths, adaptive quizzes, and progress tracking.",
       stack: ["LangChain","LLMs","FastAPI","ChromaDB"]
     },
     {
       icon: "🏠", name: "House Prices MLOps Pipeline",
+      link: "",
       desc: "End-to-end MLOps system evolved from experimental Jupyter notebooks to a scalable, Dockerized microservice. Includes automated feature engineering, CI/CD, unit testing, and a FastAPI inference endpoint.",
       stack: ["Scikit-learn","Docker","FastAPI","GitHub Actions"]
     },
     {
       icon: "🎭", name: "Deepfake Detection System",
+      link: "",
       desc: "CNN/GAN-based forensic classifier for detecting synthetic media. Trained on real vs. AI-generated media datasets with focus on temporal inconsistency and artifact analysis in compressed video streams.",
       stack: ["PyTorch","ResNet","EfficientNet","CV"]
     },
     {
       icon: "📈", name: "Financial Market Analyzer",
+      link: "",
       desc: "Time-series forecasting engine for equity markets using LSTM and Prophet models. Built quantitative signal detection for algorithmic trading strategy backtesting and risk analysis.",
       stack: ["Python","LSTM","Prophet","Pandas"]
     }
   ],
   certs: [
-    { issuer: "[DeepLearning.AI]", name: "Probability & Statistics for ML & Data Science",   status: "ACTIVE" },
-    { issuer: "[IBM]",             name: "Introduction to Machine Learning Specialization",   status: "ACTIVE" },
-    { issuer: "[IBM]",             name: "Generative AI for Digital Marketing",               status: "ACTIVE" },
-    { issuer: "[UC Davis]",        name: "Market Research Specialization",                    status: "ACTIVE" },
-    { issuer: "[Coursera]",        name: "Data Science Professional Certificate",             status: "ACTIVE" },
-    { issuer: "[Google]",          name: "Data Analytics Certificate",                        status: "ACTIVE" }
+    { issuer: "[DeepLearning.AI]", name: "Probability & Statistics for ML & Data Science",   link: "", status: "ACTIVE" },
+    { issuer: "[IBM]",             name: "Introduction to Machine Learning Specialization",   link: "", status: "ACTIVE" },
+    { issuer: "[IBM]",             name: "Generative AI for Digital Marketing",               link: "", status: "ACTIVE" },
+    { issuer: "[UC Davis]",        name: "Market Research Specialization",                    link: "", status: "ACTIVE" },
+    { issuer: "[Coursera]",        name: "Data Science Professional Certificate",             link: "", status: "ACTIVE" },
+    { issuer: "[Google]",          name: "Data Analytics Certificate",                        link: "", status: "ACTIVE" }
   ],
   achievements: {
     metrics: [
