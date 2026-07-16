@@ -543,6 +543,8 @@ function renderProjList(d) {
         <span class="card-item-icon">${proj.icon}</span>
         <span class="card-item-title">${esc(proj.name)}</span>
         <div class="card-item-controls">
+          <button class="icon-btn move-up" title="Move Up">⬆️</button>
+          <button class="icon-btn move-down" title="Move Down">⬇️</button>
           <button class="icon-btn delete" title="Delete">🗑</button>
           <button class="icon-btn expand-icon">▼</button>
         </div>
@@ -570,6 +572,22 @@ function renderProjList(d) {
     const body   = item.querySelector('.card-item-body');
     makeCollapsible(header, body);
 
+    item.querySelector('.move-up').onclick = (e) => {
+      e.stopPropagation();
+      if (i > 0) {
+        const cur = getData();
+        [cur.projects[i - 1], cur.projects[i]] = [cur.projects[i], cur.projects[i - 1]];
+        saveData(cur); renderProjList(cur);
+      }
+    };
+    item.querySelector('.move-down').onclick = (e) => {
+      e.stopPropagation();
+      const cur = getData();
+      if (i < cur.projects.length - 1) {
+        [cur.projects[i + 1], cur.projects[i]] = [cur.projects[i], cur.projects[i + 1]];
+        saveData(cur); renderProjList(cur);
+      }
+    };
     item.querySelector('.delete').onclick = (e) => {
       e.stopPropagation();
       const cur = getData(); cur.projects.splice(i, 1); saveData(cur); renderProjList(cur);
@@ -624,6 +642,8 @@ function renderCertList(d) {
         <span class="card-item-icon">📜</span>
         <span class="card-item-title">${esc(cert.issuer)} — ${esc(cert.name)}</span>
         <div class="card-item-controls">
+          <button class="icon-btn move-up" title="Move Up">⬆️</button>
+          <button class="icon-btn move-down" title="Move Down">⬇️</button>
           <button class="icon-btn delete">🗑</button>
           <button class="icon-btn expand-icon">▼</button>
         </div>
@@ -652,6 +672,22 @@ function renderCertList(d) {
     const header = item.querySelector('.card-item-header');
     const body   = item.querySelector('.card-item-body');
     makeCollapsible(header, body);
+    item.querySelector('.move-up').onclick = (e) => {
+      e.stopPropagation();
+      if (i > 0) {
+        const cur = getData();
+        [cur.certs[i - 1], cur.certs[i]] = [cur.certs[i], cur.certs[i - 1]];
+        saveData(cur); renderCertList(cur);
+      }
+    };
+    item.querySelector('.move-down').onclick = (e) => {
+      e.stopPropagation();
+      const cur = getData();
+      if (i < cur.certs.length - 1) {
+        [cur.certs[i + 1], cur.certs[i]] = [cur.certs[i], cur.certs[i + 1]];
+        saveData(cur); renderCertList(cur);
+      }
+    };
     item.querySelector('.delete').onclick = (e) => {
       e.stopPropagation();
       const cur = getData(); cur.certs.splice(i, 1); saveData(cur); renderCertList(cur);

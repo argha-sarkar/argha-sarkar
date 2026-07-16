@@ -315,7 +315,9 @@ function applyData() {
   // Projects
   const projContainer = document.getElementById('projects-container');
   if (projContainer && d.projects) {
-    projContainer.innerHTML = d.projects.map((p, i) => `
+    const isAllProjectsPage = window.location.pathname.endsWith('projects.html');
+    const projectsToShow = isAllProjectsPage ? d.projects : d.projects.slice(0, 6);
+    let html = projectsToShow.map((p, i) => `
       <div class="project-card reveal reveal-delay-${(i%4)+1}">
         <span class="project-icon">${p.icon}</span>
         <div class="project-name">${p.name}</div>
@@ -323,6 +325,15 @@ function applyData() {
         <div class="project-stack">${p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('')}</div>
       </div>
     `).join('');
+    
+    if (!isAllProjectsPage && d.projects.length > 6) {
+      html += `
+        <div class="project-card reveal" style="display:flex;align-items:center;justify-content:center;background:transparent;border:1px dashed var(--border);">
+          <a href="projects.html" class="btn btn-outline">View All Projects →</a>
+        </div>
+      `;
+    }
+    projContainer.innerHTML = html;
   }
 
   // Experience
@@ -341,13 +352,26 @@ function applyData() {
   // Certifications
   const certBody = document.getElementById('certs-tbody');
   if (certBody && d.certs) {
-    certBody.innerHTML = d.certs.map(c => `
+    const isAllCertsPage = window.location.pathname.endsWith('certifications.html');
+    const certsToShow = isAllCertsPage ? d.certs : d.certs.slice(0, 6);
+    let html = certsToShow.map(c => `
       <tr>
         <td>${c.issuer}</td>
         <td>${c.name}</td>
         <td><span class="cert-status-icon">✅</span> ${c.status}</td>
       </tr>
     `).join('');
+    
+    if (!isAllCertsPage && d.certs.length > 6) {
+      html += `
+      <tr>
+        <td colspan="3" style="text-align:center;">
+          <a href="certifications.html" class="btn btn-outline" style="margin-top:1rem;display:inline-block;">View All Certifications →</a>
+        </td>
+      </tr>
+      `;
+    }
+    certBody.innerHTML = html;
   }
 
   // Metrics
