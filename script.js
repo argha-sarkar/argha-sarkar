@@ -494,7 +494,7 @@ function applyData() {
   const linkMap = {
     'link-linkedin': d.connect?.linkedin,
     'link-email':    d.connect?.email ? `mailto:${d.connect.email}` : null,
-    'link-medium':   d.connect?.medium,
+    'link-devto':    d.connect?.devto,
     'link-twitter':  d.connect?.twitter,
     'link-github':   d.connect?.github
   };

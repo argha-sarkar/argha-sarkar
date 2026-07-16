@@ -159,7 +159,7 @@ function collectAll() {
   // Connect
   d.connect.linkedin = v('connect-linkedin') || d.connect.linkedin;
   d.connect.email    = v('connect-email')    || d.connect.email;
-  d.connect.medium   = v('connect-medium')   || d.connect.medium;
+  d.connect.devto    = v('connect-devto')    || d.connect.devto;
   d.connect.twitter  = v('connect-twitter')  || d.connect.twitter;
   d.connect.github   = v('connect-github')   || d.connect.github;
   d.connect.phone    = v('connect-phone')    || d.connect.phone;
@@ -958,7 +958,7 @@ function renderConnectPanel(d) {
         ${[
           ['connect-linkedin','LinkedIn URL','linkedin',d.connect.linkedin],
           ['connect-email','Email Address','email',d.connect.email],
-          ['connect-medium','Medium URL','medium',d.connect.medium],
+          ['connect-devto','Dev.to URL','devto',d.connect.devto],
           ['connect-twitter','Twitter/X URL','twitter',d.connect.twitter],
           ['connect-github','GitHub URL','github',d.connect.github],
           ['connect-phone','Phone Number','phone',d.connect.phone]

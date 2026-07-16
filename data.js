@@ -442,7 +442,7 @@ const DEFAULT_DATA = {
   "connect": {
     "linkedin": "https://linkedin.com/in/arghasarkar",
     "email": "arghasarkar5373@gmail.com",
-    "medium": "https://medium.com/@arghasarkar5373/",
+    "devto": "https://dev.to/argha_sarkar",
     "twitter": "https://twitter.com/arghasa64623109",
     "github": "https://github.com/argha-sarkar",
     "phone": "+91-7439018427"
