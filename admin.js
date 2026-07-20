@@ -116,6 +116,7 @@ function loadAllPanels() {
   renderArsenalPanel(d);
   renderExperiencePanel(d);
   renderProjectsPanel(d);
+  renderOpensourcePanel(d);
   renderCertsPanel(d);
   renderAchievementsPanel(d);
   renderStatsPanel(d);
@@ -610,6 +611,106 @@ function renderProjList(d) {
     });
     makeTagsInput(item.querySelector('.proj-stack-tags'), proj.stack, (tags) => {
       const cur = getData(); cur.projects[i].stack = tags; saveData(cur);
+    });
+    list.appendChild(item);
+  });
+}
+
+/* ────────────────────────────────────
+   OPEN SOURCE PANEL
+──────────────────────────────────── */
+function renderOpensourcePanel(d) {
+  const el = document.getElementById('panel-opensource');
+  el.innerHTML = `
+    <div class="panel-title">📝 Open Source & Blogs</div>
+    <div class="panel-sub">Add, edit, or remove open source projects and Dev.to articles.</div>
+    <div class="card-list" id="os-list"></div>
+    <button class="add-btn" id="add-os-btn">+ Add Entry</button>
+  `;
+  renderOpensourceList(d);
+  document.getElementById('add-os-btn').onclick = () => {
+    const cur = getData();
+    cur.opensource.push({ icon: '📝', name: 'New Entry', desc: 'Description', link: '' });
+    saveData(cur);
+    renderOpensourceList(cur);
+  };
+}
+
+function renderOpensourceList(d) {
+  const list = document.getElementById('os-list');
+  if (!list) return;
+  list.innerHTML = '';
+  d.opensource = d.opensource || [];
+  d.opensource.forEach((os, i) => {
+    const item = document.createElement('div');
+    item.className = 'card-item';
+    item.innerHTML = `
+      <div class="card-item-header">
+        <span class="card-item-icon">${os.icon}</span>
+        <span class="card-item-title">${esc(os.name)}</span>
+        <div class="card-item-controls">
+          <button class="icon-btn move-up" title="Move Up">⬆️</button>
+          <button class="icon-btn move-down" title="Move Down">⬇️</button>
+          <button class="icon-btn delete" title="Delete">🗑</button>
+          <button class="icon-btn expand-icon">▼</button>
+        </div>
+      </div>
+      <div class="card-item-body open">
+        <div class="form-grid" style="margin-bottom:0.8rem">
+          <div class="form-group">
+            <label class="form-label">ICON (emoji)</label>
+            <input class="form-input os-icon" value="${esc(os.icon)}" maxlength="4" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">TITLE</label>
+            <input class="form-input os-name" value="${esc(os.name)}" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">DESCRIPTION</label>
+            <textarea class="form-textarea os-desc">${esc(os.desc)}</textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">LINK (Dev.to / GitHub)</label>
+            <input class="form-input os-link" placeholder="https://..." value="${esc(os.link || '')}" />
+          </div>
+        </div>
+      </div>
+    `;
+    const header = item.querySelector('.card-item-header');
+    const body   = item.querySelector('.card-item-body');
+    makeCollapsible(header, body);
+
+    item.querySelector('.move-up').onclick = (e) => {
+      e.stopPropagation();
+      if (i > 0) {
+        const cur = getData();
+        [cur.opensource[i - 1], cur.opensource[i]] = [cur.opensource[i], cur.opensource[i - 1]];
+        saveData(cur); renderOpensourceList(cur);
+      }
+    };
+    item.querySelector('.move-down').onclick = (e) => {
+      e.stopPropagation();
+      const cur = getData();
+      if (i < cur.opensource.length - 1) {
+        [cur.opensource[i + 1], cur.opensource[i]] = [cur.opensource[i], cur.opensource[i + 1]];
+        saveData(cur); renderOpensourceList(cur);
+      }
+    };
+    item.querySelector('.delete').onclick = (e) => {
+      e.stopPropagation();
+      const cur = getData(); cur.opensource.splice(i, 1); saveData(cur); renderOpensourceList(cur);
+    };
+    ['icon','name','desc','link'].forEach(f => {
+      item.querySelector(`.os-${f}`).addEventListener('change', () => {
+        const cur = getData();
+        cur.opensource[i].icon = item.querySelector('.os-icon').value;
+        cur.opensource[i].name = item.querySelector('.os-name').value;
+        cur.opensource[i].desc = item.querySelector('.os-desc').value;
+        cur.opensource[i].link = item.querySelector('.os-link').value;
+        saveData(cur);
+        item.querySelector('.card-item-icon').textContent = cur.opensource[i].icon;
+        item.querySelector('.card-item-title').textContent = cur.opensource[i].name;
+      });
     });
     list.appendChild(item);
   });

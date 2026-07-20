@@ -277,6 +277,14 @@ const DEFAULT_DATA = {
       ]
     }
   ],
+  "opensource": [
+    {
+      "icon": "📝",
+      "name": "My Dev.to Blog Post",
+      "desc": "A sample blog post or open source project link.",
+      "link": "https://dev.to/argha_sarkar"
+    }
+  ],
   "certs": [
     {
       "issuer": "[IBM]",

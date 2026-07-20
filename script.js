@@ -378,6 +378,21 @@ function applyData() {
     projContainer.innerHTML = html;
   }
 
+  // Open Source
+  const osContainer = document.getElementById('opensource-container');
+  if (osContainer && d.opensource) {
+    let html = d.opensource.map((p, i) => `
+      <div class="project-card reveal reveal-delay-${(i%4)+1}">
+        <span class="project-icon">${p.icon}</span>
+        <div class="project-name">
+          ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${p.name} <svg style="width:14px;height:14px;vertical-align:middle;margin-left:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>` : p.name}
+        </div>
+        <p class="project-desc">${p.desc}</p>
+      </div>
+    `).join('');
+    osContainer.innerHTML = html;
+  }
+
   // Experience
   const expContainer = document.getElementById('timeline-container');
   if (expContainer && d.experience) {
