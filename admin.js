@@ -630,6 +630,7 @@ function renderOpensourcePanel(d) {
   renderOpensourceList(d);
   document.getElementById('add-os-btn').onclick = () => {
     const cur = getData();
+    cur.opensource = cur.opensource || [];
     cur.opensource.push({ icon: '📝', name: 'New Entry', desc: 'Description', link: '' });
     saveData(cur);
     renderOpensourceList(cur);
