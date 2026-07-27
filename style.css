@@ -6,50 +6,51 @@
 
 /* ── CSS Variables ── */
 :root {
-  /* Dark Theme (default) */
-  --bg-primary:    #0d1117;
-  --bg-secondary:  #161b22;
-  --bg-tertiary:   #1c2128;
-  --bg-glass:      rgba(22, 27, 34, 0.7);
-  --border-color:  rgba(0, 255, 65, 0.15);
-  --border-hover:  rgba(0, 255, 65, 0.5);
-  --accent:        #00ff41;
-  --accent-dim:    #00cc33;
-  --accent-glow:   rgba(0, 255, 65, 0.2);
-  --text-primary:  #e6edf3;
-  --text-secondary:#8b949e;
-  --text-muted:    #484f58;
-  --text-code:     #00ff41;
-  --card-shadow:   0 8px 32px rgba(0, 0, 0, 0.5);
-  --glow-shadow:   0 0 20px rgba(0, 255, 65, 0.2);
-  --nav-bg:        rgba(13, 17, 23, 0.85);
-  --scrollbar-thumb: #00ff41;
-  --scrollbar-track: #161b22;
-  --badge-bg:      #1c2128;
-  --timeline-line: rgba(0, 255, 65, 0.3);
+  /* Dark Theme - Premium Deep Aesthetic */
+  --bg-primary:    #09090b;
+  --bg-secondary:  #121214;
+  --bg-tertiary:   #18181b;
+  --bg-glass:      rgba(18, 18, 20, 0.65);
+  --border-color:  rgba(255, 255, 255, 0.08);
+  --border-hover:  rgba(255, 255, 255, 0.15);
+  --accent:        #6366f1; /* Premium Indigo */
+  --accent-dim:    #4f46e5;
+  --accent-glow:   rgba(99, 102, 241, 0.25);
+  --text-primary:  #fafafa;
+  --text-secondary:#a1a1aa;
+  --text-muted:    #52525b;
+  --text-code:     #818cf8;
+  --card-shadow:   0 10px 40px rgba(0, 0, 0, 0.6);
+  --glow-shadow:   0 0 24px rgba(99, 102, 241, 0.2);
+  --nav-bg:        rgba(9, 9, 11, 0.7);
+  --scrollbar-thumb: #52525b;
+  --scrollbar-track: #09090b;
+  --badge-bg:      #18181b;
+  --timeline-line: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] {
-  --bg-primary:    #f0f6ff;
+  /* Light Theme - Clean & Crisp */
+  --bg-primary:    #fafafa;
   --bg-secondary:  #ffffff;
-  --bg-tertiary:   #eaf1fb;
-  --bg-glass:      rgba(255, 255, 255, 0.8);
-  --border-color:  rgba(0, 120, 60, 0.2);
-  --border-hover:  rgba(0, 120, 60, 0.6);
-  --accent:        #007830;
-  --accent-dim:    #005a24;
-  --accent-glow:   rgba(0, 120, 60, 0.12);
-  --text-primary:  #1a2233;
-  --text-secondary:#4a5568;
-  --text-muted:    #9aa5b4;
-  --text-code:     #005a24;
-  --card-shadow:   0 8px 32px rgba(0, 80, 40, 0.1);
-  --glow-shadow:   0 0 20px rgba(0, 120, 60, 0.12);
-  --nav-bg:        rgba(240, 246, 255, 0.9);
-  --scrollbar-thumb: #007830;
-  --scrollbar-track: #eaf1fb;
-  --badge-bg:      #eaf1fb;
-  --timeline-line: rgba(0, 120, 60, 0.3);
+  --bg-tertiary:   #f4f4f5;
+  --bg-glass:      rgba(255, 255, 255, 0.75);
+  --border-color:  rgba(0, 0, 0, 0.08);
+  --border-hover:  rgba(0, 0, 0, 0.15);
+  --accent:        #4f46e5;
+  --accent-dim:    #4338ca;
+  --accent-glow:   rgba(79, 70, 229, 0.15);
+  --text-primary:  #09090b;
+  --text-secondary:#52525b;
+  --text-muted:    #a1a1aa;
+  --text-code:     #4338ca;
+  --card-shadow:   0 8px 32px rgba(0, 0, 0, 0.06);
+  --glow-shadow:   0 0 24px rgba(79, 70, 229, 0.15);
+  --nav-bg:        rgba(250, 250, 250, 0.75);
+  --scrollbar-thumb: #d4d4d8;
+  --scrollbar-track: #fafafa;
+  --badge-bg:      #f4f4f5;
+  --timeline-line: rgba(0, 0, 0, 0.1);
 }
 
 /* ── Reset & Base ── */
@@ -77,17 +78,40 @@ body {
 /* ── Selection ── */
 ::selection { background: var(--accent); color: #0d1117; }
 
-/* ── Matrix Rain Canvas ── */
-#matrix-canvas {
+/* ── Dynamic Premium Background ── */
+.bg-orbs {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 0;
-  opacity: 0.035;
+  overflow: hidden;
   pointer-events: none;
-  transition: opacity 0.4s;
 }
-[data-theme="light"] #matrix-canvas { opacity: 0.015; }
+.bg-orbs .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: float 20s infinite alternate ease-in-out;
+}
+.bg-orbs .orb-1 {
+  width: 600px; height: 600px;
+  background: var(--accent);
+  top: -10%; left: -10%;
+}
+.bg-orbs .orb-2 {
+  width: 500px; height: 500px;
+  background: var(--accent-dim);
+  bottom: -20%; right: -10%;
+  animation-delay: -10s;
+}
+[data-theme="light"] .bg-orbs .orb { opacity: 0.15; }
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(100px, 50px) scale(1.1); }
+  100% { transform: translate(-50px, 100px) scale(0.9); }
+}
 
 /* ── Navigation ── */
 .navbar {
