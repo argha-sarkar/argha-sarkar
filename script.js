@@ -175,6 +175,121 @@ function initNavbar() {
   });
 }
 
+/* ── Scroll Progress Bar ── */
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress-bar');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrollTop    = window.scrollY;
+    const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+    const pct          = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width    = pct + '%';
+  }, { passive: true });
+}
+
+/* ── Live IST Clock ── */
+function initLiveClock() {
+  const el = document.getElementById('hero-live-clock');
+  if (!el) return;
+  function tick() {
+    const now = new Date();
+    const opts = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    el.textContent = '\u00b7\u00a0' + now.toLocaleTimeString('en-IN', opts) + ' IST';
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+
+/* ── Toast Notification ── */
+let _toastTimer = null;
+function showToast(msg) {
+  const toast = document.getElementById('toast-notification');
+  if (!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('show');
+  if (_toastTimer) clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+/* ── Copy to Clipboard ── */
+function initCopyToClipboard() {
+  const emailEl = document.getElementById('footer-email-copy');
+  const phoneEl = document.getElementById('footer-phone-copy');
+  if (emailEl) {
+    emailEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText('arghasarkar5373@gmail.com')
+        .then(() => showToast('\u2713 Email copied to clipboard!'))
+        .catch(() => showToast('\u2192 arghasarkar5373@gmail.com'));
+    });
+  }
+  if (phoneEl) {
+    phoneEl.addEventListener('click', () => {
+      navigator.clipboard.writeText('+917439018427')
+        .then(() => showToast('\u2713 Phone number copied!'))
+        .catch(() => showToast('\u2192 +91-7439018427'));
+    });
+  }
+}
+
+/* ── Keyboard Shortcuts ── */
+function initKeyboardShortcuts() {
+  document.addEventListener('keydown', (e) => {
+    // Skip if user is typing in an input / textarea
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    switch (e.key.toLowerCase()) {
+      case 'g':
+        window.open('https://github.com/argha-sarkar', '_blank');
+        showToast('\ud83d\ude80 Opening GitHub...');
+        break;
+      case 'e':
+        window.location.href = 'mailto:arghasarkar5373@gmail.com';
+        showToast('\u2709\ufe0f Opening email client...');
+        break;
+      case 't':
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showToast('\u2191 Scrolled to top');
+        break;
+    }
+  });
+}
+
+/* ── Glitch Effect on Hero Name ── */
+function initGlitchEffect() {
+  const el = document.querySelector('.hero-name.glitch');
+  if (!el) return;
+  // Fire once on load after a short delay
+  setTimeout(() => {
+    el.classList.add('glitch-active');
+    setTimeout(() => el.classList.remove('glitch-active'), 500);
+  }, 900);
+  // Fire periodically
+  setInterval(() => {
+    el.classList.add('glitch-active');
+    setTimeout(() => el.classList.remove('glitch-active'), 500);
+  }, 12000);
+}
+
+/* ── 3D Card Tilt Effect ── */
+function initCardTilt() {
+  const cards = document.querySelectorAll('.project-card, .research-card, .metric-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect   = card.getBoundingClientRect();
+      const cx     = rect.left + rect.width  / 2;
+      const cy     = rect.top  + rect.height / 2;
+      const dx     = e.clientX - cx;
+      const dy     = e.clientY - cy;
+      const tiltX  = -(dy / (rect.height / 2)) * 7;
+      const tiltY  =  (dx / (rect.width  / 2)) * 7;
+      card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
 /* ── Mobile Hamburger ── */
 function initHamburger() {
   const btn   = document.getElementById('hamburger-btn');
@@ -536,6 +651,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initCounters();
   initBackToTop();
+  initScrollProgress();
+  initLiveClock();
+  initCopyToClipboard();
+  initKeyboardShortcuts();
+  initGlitchEffect();
+  // Card tilt is re-initialised after data is applied so dynamic cards are covered
+  setTimeout(initCardTilt, 800);
 
   // Theme toggle button
   const toggleBtn = document.getElementById('theme-toggle-btn');

@@ -105,13 +105,45 @@ body {
   bottom: -20%; right: -10%;
   animation-delay: -10s;
 }
-[data-theme="light"] .bg-orbs .orb { opacity: 0.15; }
+.bg-orbs .orb-3 {
+  width: 400px; height: 400px;
+  background: #06b6d4; /* teal accent */
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -5s;
+  opacity: 0.15;
+}
+[data-theme="light"] .bg-orbs .orb { opacity: 0.12; }
 
 @keyframes float {
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(100px, 50px) scale(1.1); }
   100% { transform: translate(-50px, 100px) scale(0.9); }
 }
+
+/* ── Matrix Canvas ── */
+#matrix-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+[data-theme="light"] #matrix-canvas { opacity: 0.06; }
+
+/* ── Scroll Progress Bar ── */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent), #06b6d4);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
 
 /* ── Navigation ── */
 .navbar {
@@ -221,9 +253,15 @@ main {
 .section-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.3;
+  background: linear-gradient(90deg, transparent, var(--accent), #06b6d4, var(--accent), transparent);
+  background-size: 200% 100%;
+  opacity: 0.4;
   margin: 0;
+  animation: divider-sweep 6s linear infinite;
+}
+@keyframes divider-sweep {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* ── Section Labels ── */
@@ -311,8 +349,56 @@ main {
   line-height: 1.1;
   margin-bottom: 0.5rem;
   animation: fadeInUp 0.8s 0.2s ease both;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.hero-name .accent { color: var(--accent); }
+[data-theme="light"] .hero-name {
+  background: linear-gradient(135deg, #09090b 0%, var(--accent) 60%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.hero-name .accent { -webkit-text-fill-color: unset; color: inherit; }
+
+/* Glitch animation on hero name */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  overflow: hidden;
+  opacity: 0;
+}
+.glitch.glitch-active::before {
+  animation: glitch-before 0.4s steps(2) forwards;
+  opacity: 1;
+}
+.glitch.glitch-active::after {
+  animation: glitch-after 0.4s steps(2) 0.05s forwards;
+  opacity: 1;
+}
+@keyframes glitch-before {
+  0%   { clip-path: inset(0 0 90% 0); transform: translate(-3px, 0); }
+  25%  { clip-path: inset(30% 0 50% 0); transform: translate(3px, 0); }
+  50%  { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 0); }
+  75%  { clip-path: inset(10% 0 80% 0); transform: translate(2px, 0); }
+  100% { clip-path: inset(0 0 100% 0); transform: translate(0, 0); }
+}
+@keyframes glitch-after {
+  0%   { clip-path: inset(60% 0 10% 0); transform: translate(3px, 0); color: #06b6d4; }
+  33%  { clip-path: inset(20% 0 70% 0); transform: translate(-3px, 0); }
+  66%  { clip-path: inset(80% 0 5%  0); transform: translate(2px, 0); color: #a78bfa; }
+  100% { clip-path: inset(100% 0 0  0); transform: translate(0, 0); }
+}
 
 .hero-title {
   font-family: 'JetBrains Mono', monospace;
@@ -368,6 +454,16 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   animation: fadeInUp 0.8s 0.65s ease both;
+}
+
+/* Hero live clock */
+.hero-clock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-left: 0.4rem;
+  opacity: 0.8;
 }
 
 .btn {
@@ -649,6 +745,27 @@ main {
   position: relative;
   margin-bottom: 3rem;
 }
+/* Timeline dot pulse ring */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: calc(-2.08rem - 6px);
+  top: calc(0.4rem - 6px);
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.timeline-item:hover::after {
+  opacity: 0.5;
+  animation: ring-pulse 1.2s ease-out infinite;
+}
+@keyframes ring-pulse {
+  0%   { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -723,7 +840,21 @@ main {
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
+/* Shimmer sweep */
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.project-card:hover::after { left: 125%; }
 .project-card::before {
   content: '';
   position: absolute;
@@ -1104,6 +1235,30 @@ main {
 @keyframes glowPulse {
   0%, 100% { box-shadow: 0 0 10px var(--accent-glow); }
   50%       { box-shadow: 0 0 25px var(--accent-glow), 0 0 50px rgba(0,255,65,0.1); }
+}
+
+/* ── Toast Notification ── */
+#toast-notification {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-hover);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  z-index: 9998;
+  transform: translateX(120%);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  pointer-events: none;
+  max-width: 280px;
+}
+#toast-notification.show {
+  transform: translateX(0);
 }
 
 /* Scroll reveal */

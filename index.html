@@ -7,6 +7,7 @@
   <meta id="site-desc" name="description" content="Portfolio of Argha Sarkar — AI Research Engineer specializing in Deep Learning, MLOps, Deepfake Detection, RAG Systems, and Edge AI. 5+ years of experience building production AI." />
   <meta name="keywords" content="Argha Sarkar, AI Research Engineer, Deep Learning, MLOps, PyTorch, Deepfake Detection, RAG, LangChain, Computer Vision" />
   <meta name="author" content="Argha Sarkar" />
+  <link rel="canonical" href="https://argha-sarkar.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Argha Sarkar — AI Research Engineer" />
@@ -23,10 +24,17 @@
 
 <body>
 
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress-bar" aria-hidden="true"></div>
+
+<!-- Matrix Rain Canvas -->
+<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
 <!-- Dynamic Premium Background -->
-<div class="bg-orbs">
+<div class="bg-orbs" aria-hidden="true">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 </div>
 
 <!-- ═══════════════════════════════════
@@ -81,9 +89,10 @@
   <div class="hero-badge">
     <span class="dot"></span>
     <span id="hero-status-text">STATUS&nbsp;·&nbsp;ONLINE&nbsp;·&nbsp;INDIA</span>
+    <span id="hero-live-clock" class="hero-clock" aria-live="polite"></span>
   </div>
 
-  <h1 class="hero-name">
+  <h1 class="hero-name glitch" data-text="Argha Sarkar">
     <span id="hero-name-first">Argha</span> <span class="accent" id="hero-name-last">Sarkar</span>
   </h1>
 
@@ -101,9 +110,10 @@
   </div>
 
   <div class="hero-cta">
-    <a href="#projects" class="btn btn-primary">./view_projects.sh</a>
-    <a href="#connect" class="btn btn-outline">./connect.sh</a>
-    <a href="mailto:arghasarkar5373@gmail.com" class="btn btn-outline">./email.sh</a>
+    <a href="#projects" class="btn btn-primary" id="cta-projects">./view_projects.sh</a>
+    <a href="#connect" class="btn btn-outline" id="cta-connect">./connect.sh</a>
+    <a href="mailto:arghasarkar5373@gmail.com" class="btn btn-outline" id="cta-email">./email.sh</a>
+    <a href="resume.pdf" download class="btn btn-outline" id="cta-resume" aria-label="Download Resume PDF">📄 resume.pdf</a>
   </div>
 
   <div class="hero-scroll-hint">
@@ -795,8 +805,9 @@
       <div>print(<span style="color:var(--accent)">"─" * 60</span>)</div>
       <div style="color:var(--text-primary)">&gt; AI systems built. Models deployed. Neurons firing.</div>
       <div style="color:var(--text-primary)">&gt; Initiating next training epoch...</div>
-      <div style="color:var(--text-secondary)">&gt; <a href="mailto:arghasarkar5373@gmail.com" style="color:var(--accent);text-decoration:none;">arghasarkar5373@gmail.com</a> | +91-7439018427</div>
+      <div style="color:var(--text-secondary)">&gt; <a href="mailto:arghasarkar5373@gmail.com" style="color:var(--accent);text-decoration:none;" id="footer-email-copy" title="Click to copy email" aria-label="Copy email to clipboard">arghasarkar5373@gmail.com</a> | <span id="footer-phone-copy" style="cursor:pointer;color:var(--accent);" title="Click to copy phone" aria-label="Copy phone to clipboard">+91-7439018427</span></div>
       <div>print(<span style="color:var(--accent)">"─" * 60</span>)</div>
+      <div style="color:var(--text-muted);margin-top:0.5rem;font-size:0.68rem;">⌨️ Keyboard shortcuts: <kbd style="background:var(--bg-tertiary);padding:1px 5px;border-radius:3px;border:1px solid var(--border-color);">G</kbd> GitHub &nbsp; <kbd style="background:var(--bg-tertiary);padding:1px 5px;border-radius:3px;border:1px solid var(--border-color);">E</kbd> Email &nbsp; <kbd style="background:var(--bg-tertiary);padding:1px 5px;border-radius:3px;border:1px solid var(--border-color);">T</kbd> Top</div>
     </div>
 
     <!-- Footer Bar -->
@@ -809,6 +820,9 @@
 </footer>
 
 </main>
+
+<!-- Toast Notification -->
+<div id="toast-notification" aria-live="polite" aria-atomic="true"></div>
 
 <!-- Back to Top -->
 <button
