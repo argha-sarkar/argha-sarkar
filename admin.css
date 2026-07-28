@@ -744,3 +744,103 @@ body {
   .form-grid { grid-template-columns: 1fr; }
   .qa-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ══════════════════════════════════════
+   RESUME UPLOAD COMPONENT
+══════════════════════════════════════ */
+.resume-drop-zone {
+  border: 2px dashed rgba(0, 255, 65, 0.3);
+  border-radius: 14px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: rgba(0, 255, 65, 0.03);
+  position: relative;
+  user-select: none;
+}
+.resume-drop-zone:hover {
+  border-color: rgba(0, 255, 65, 0.65);
+  background: rgba(0, 255, 65, 0.07);
+}
+.resume-drop-zone.drag-over {
+  border-color: #00ff41;
+  background: rgba(0, 255, 65, 0.13);
+  transform: scale(1.01);
+  box-shadow: 0 0 24px rgba(0, 255, 65, 0.2);
+}
+.resume-drop-zone.has-file {
+  border-color: rgba(0, 255, 65, 0.5);
+  border-style: solid;
+  background: rgba(0, 255, 65, 0.05);
+}
+.resume-drop-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.7rem;
+  line-height: 1;
+}
+.resume-drop-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #e6edf3;
+  margin-bottom: 0.3rem;
+}
+.resume-drop-sub {
+  font-size: 0.72rem;
+  color: #484f58;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.resume-status-block {
+  margin-top: 1rem;
+  background: rgba(0, 255, 65, 0.07);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.resume-status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.resume-status-icon { font-size: 1.5rem; flex-shrink: 0; }
+.resume-file-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: #e6edf3;
+  font-weight: 600;
+}
+.resume-file-size {
+  font-size: 0.7rem;
+  color: #484f58;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 0.2rem;
+}
+
+.resume-progress {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.resume-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #21262d;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.resume-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00cc33, #00ff41);
+  border-radius: 3px;
+  transition: width 0.2s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+#resume-progress-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #00ff41;
+}
+

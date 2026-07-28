@@ -1126,6 +1126,39 @@ function renderSettingsPanel(d) {
     </div>
 
     <div class="form-section">
+      <div class="form-section-title">▶ RESUME / CV UPLOAD</div>
+      <p style="font-size:0.75rem;color:#8b949e;font-family:'JetBrains Mono',monospace;margin-bottom:1rem;">
+        Upload your resume PDF. It will be stored in the browser and served as a download button on the portfolio.<br>
+        Uploading a new file <strong style="color:#f0883e">automatically deletes the previous one</strong>.
+      </p>
+
+      <div id="resume-drop-zone" class="resume-drop-zone">
+        <div class="resume-drop-icon">📄</div>
+        <div class="resume-drop-text">Drag &amp; drop your resume PDF here</div>
+        <div class="resume-drop-sub">or click to browse</div>
+        <input type="file" id="resume-file-input" accept=".pdf" style="display:none" />
+      </div>
+
+      <div id="resume-current-status" class="resume-status-block" style="display:none">
+        <div class="resume-status-header">
+          <span class="resume-status-icon">✅</span>
+          <div>
+            <div id="resume-file-name" class="resume-file-name"></div>
+            <div id="resume-file-size" class="resume-file-size"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:0.6rem;margin-top:0.8rem;flex-wrap:wrap;">
+          <button class="add-btn" id="resume-preview-btn" style="color:#79c0ff;border-color:rgba(121,192,255,0.3);border-style:solid;">👁 Preview PDF</button>
+          <button class="add-btn" id="resume-delete-btn" style="color:#ff4444;border-color:rgba(255,68,68,0.3);border-style:solid;">🗑 Delete Resume</button>
+        </div>
+      </div>
+      <div id="resume-upload-progress" class="resume-progress" style="display:none">
+        <div class="resume-progress-bar"><div id="resume-progress-fill" class="resume-progress-fill"></div></div>
+        <span id="resume-progress-label">Processing...</span>
+      </div>
+    </div>
+
+    <div class="form-section">
       <div class="form-section-title">▶ DATA MANAGEMENT</div>
       <div style="display:flex;gap:0.7rem;flex-wrap:wrap">
         <button class="add-btn" id="export-btn" style="flex:1;border-style:solid;color:#79c0ff;border-color:rgba(121,192,255,0.3)">📤 Export Data JSON</button>
@@ -1156,7 +1189,123 @@ function renderSettingsPanel(d) {
       toast('Reset to defaults!');
     }
   };
-}
+
+  // ── Resume Upload Logic ──
+  const RESUME_KEY = 'argha_resume_data';
+  const RESUME_NAME_KEY = 'argha_resume_name';
+  const RESUME_SIZE_KEY = 'argha_resume_size';
+  const dropZone   = document.getElementById('resume-drop-zone');
+  const fileInput  = document.getElementById('resume-file-input');
+  const statusBlock = document.getElementById('resume-current-status');
+  const progressBlock = document.getElementById('resume-upload-progress');
+  const progressFill  = document.getElementById('resume-progress-fill');
+  const progressLabel = document.getElementById('resume-progress-label');
+
+  function refreshResumeStatus() {
+    const stored = localStorage.getItem(RESUME_KEY);
+    if (stored) {
+      const name = localStorage.getItem(RESUME_NAME_KEY) || 'resume.pdf';
+      const size = localStorage.getItem(RESUME_SIZE_KEY) || '';
+      document.getElementById('resume-file-name').textContent = '📄 ' + name;
+      document.getElementById('resume-file-size').textContent = size;
+      statusBlock.style.display = 'block';
+      dropZone.classList.add('has-file');
+      dropZone.querySelector('.resume-drop-text').textContent = 'Drop a new PDF to replace';
+    } else {
+      statusBlock.style.display = 'none';
+      dropZone.classList.remove('has-file');
+      dropZone.querySelector('.resume-drop-text').textContent = 'Drag & drop your resume PDF here';
+    }
+  }
+
+  function processFile(file) {
+    if (!file || file.type !== 'application/pdf') {
+      return toast('Please upload a valid PDF file.', 'error');
+    }
+    if (file.size > 8 * 1024 * 1024) {
+      return toast('File too large — max 8 MB for localStorage storage.', 'error');
+    }
+    // Delete previous
+    localStorage.removeItem(RESUME_KEY);
+    localStorage.removeItem(RESUME_NAME_KEY);
+    localStorage.removeItem(RESUME_SIZE_KEY);
+
+    // Show progress
+    progressBlock.style.display = 'block';
+    statusBlock.style.display = 'none';
+    progressFill.style.width = '0%';
+    progressLabel.textContent = 'Reading file...';
+
+    const reader = new FileReader();
+    reader.onprogress = (e) => {
+      if (e.lengthComputable) {
+        const pct = Math.round((e.loaded / e.total) * 90);
+        progressFill.style.width = pct + '%';
+        progressLabel.textContent = 'Reading... ' + pct + '%';
+      }
+    };
+    reader.onload = (e) => {
+      progressFill.style.width = '100%';
+      progressLabel.textContent = 'Saving...';
+      setTimeout(() => {
+        try {
+          localStorage.setItem(RESUME_KEY, e.target.result);
+          const sizeKb = (file.size / 1024).toFixed(1);
+          localStorage.setItem(RESUME_NAME_KEY, file.name);
+          localStorage.setItem(RESUME_SIZE_KEY, sizeKb + ' KB  ·  ' + new Date().toLocaleDateString('en-IN'));
+          progressBlock.style.display = 'none';
+          refreshResumeStatus();
+          toast('✅ Resume uploaded! Download button is now active on the portfolio.');
+        } catch(storageErr) {
+          progressBlock.style.display = 'none';
+          toast('Storage quota exceeded. Try a smaller file.', 'error');
+        }
+      }, 300);
+    };
+    reader.onerror = () => {
+      progressBlock.style.display = 'none';
+      toast('Failed to read file.', 'error');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // Click to browse
+  dropZone.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files[0]) processFile(fileInput.files[0]);
+    fileInput.value = '';
+  });
+
+  // Drag & Drop
+  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    processFile(file);
+  });
+
+  // Preview
+  document.getElementById('resume-preview-btn').onclick = () => {
+    const data = localStorage.getItem(RESUME_KEY);
+    if (!data) return toast('No resume found.', 'error');
+    const win = window.open();
+    win.document.write('<iframe src="' + data + '" style="width:100%;height:100%;border:none;position:fixed;top:0;left:0;" />');
+  };
+
+  // Delete
+  document.getElementById('resume-delete-btn').onclick = () => {
+    if (!confirm('Delete the uploaded resume? This cannot be undone.')) return;
+    localStorage.removeItem(RESUME_KEY);
+    localStorage.removeItem(RESUME_NAME_KEY);
+    localStorage.removeItem(RESUME_SIZE_KEY);
+    refreshResumeStatus();
+    toast('Resume deleted.');
+  };
+
+  refreshResumeStatus();
+
 
 /* ────────────────────────────────────
    EXPORT / IMPORT

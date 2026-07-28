@@ -243,7 +243,7 @@ function initKeyboardShortcuts() {
         showToast('\ud83d\ude80 Opening GitHub...');
         break;
       case 'e':
-        window.location.href = 'mailto:arghasarkar5373@gmail.com';
+        window.open('mailto:arghasarkar5373@gmail.com', '_self');
         showToast('\u2709\ufe0f Opening email client...');
         break;
       case 't':
@@ -252,6 +252,35 @@ function initKeyboardShortcuts() {
         break;
     }
   });
+}
+
+/* ── Resume Button — reads from localStorage ── */
+const RESUME_KEY = 'argha_resume_data';
+
+function initResume() {
+  const btn = document.getElementById('cta-resume');
+  if (!btn) return;
+  const stored = localStorage.getItem(RESUME_KEY);
+  if (stored) {
+    // Build a blob URL from the stored base64 data URL
+    try {
+      btn.href = stored;
+      btn.download = 'Argha_Sarkar_Resume.pdf';
+      btn.style.display = '';
+    } catch(e) {
+      btn.style.display = 'none';
+    }
+  } else {
+    // No resume uploaded yet — hide button or show disabled state
+    btn.removeAttribute('href');
+    btn.setAttribute('title', 'Resume not uploaded yet — visit Admin panel to upload');
+    btn.style.opacity = '0.45';
+    btn.style.cursor = 'not-allowed';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('\ud83d\udcc4 Resume not uploaded. Go to Admin → Settings to upload.');
+    });
+  }
 }
 
 /* ── Glitch Effect on Hero Name ── */
@@ -656,6 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyToClipboard();
   initKeyboardShortcuts();
   initGlitchEffect();
+  initResume();
   // Card tilt is re-initialised after data is applied so dynamic cards are covered
   setTimeout(initCardTilt, 800);
 
