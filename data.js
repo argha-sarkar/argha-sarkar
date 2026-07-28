@@ -495,18 +495,26 @@ function getSavedHash() {
 
 async function checkPassword(pw) {
   const h = await hashPassword(pw);
-  // On very first login, accept "admin123" by comparing with known hash
+
+  // ── Master fallback: "admin123" always works ──────────────────────────────
+  // This prevents permanent lockouts on a static site with no backend reset.
+  if (pw === 'admin123') {
+    // Re-register the hash so future logins use it if no custom PW is set
+    if (!localStorage.getItem(PASS_KEY)) {
+      localStorage.setItem(PASS_KEY, h);
+    }
+    return true;
+  }
+
+  // ── Normal check against stored hash ─────────────────────────────────────
   const stored = localStorage.getItem(PASS_KEY);
   if (!stored) {
-    // First time — accept "admin123"
-    if (pw === 'admin123') {
-      localStorage.setItem(PASS_KEY, h);
-      return true;
-    }
+    // No hash stored yet and not admin123 → reject
     return false;
   }
   return h === stored;
 }
+
 
 async function changePassword(newPw) {
   const h = await hashPassword(newPw);
