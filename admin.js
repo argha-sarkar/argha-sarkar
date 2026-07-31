@@ -1305,7 +1305,7 @@ function renderSettingsPanel(d) {
   };
 
   refreshResumeStatus();
-
+}
 
 /* ────────────────────────────────────
    EXPORT / IMPORT
